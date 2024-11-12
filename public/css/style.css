@@ -1,0 +1,44 @@
+/* Pastikan body dan html punya tinggi minimal 100% */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Wrapper untuk keseluruhan konten */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Tinggi minimal agar mencakup seluruh viewport */
+}
+
+/* Bagian konten utama yang bisa tumbuh */
+.content {
+  flex: 1; /* Mengisi ruang yang tersisa */
+}
+
+/* Styling footer */
+footer {
+  padding: 1px;
+}
+
+.table > tbody > tr > * {
+  vertical-align: middle;
+}
+
+.custom-shape {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.btn-custom {
+  width: 200px; /* Set to your desired width */
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-input {
+  display: none;
+}
