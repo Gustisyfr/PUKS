@@ -338,62 +338,31 @@
                     <textarea type="text" class="form-control" id="uraian" name="uraian" placeholder="Masukan Uraian" rows="3"></textarea>
                 </div>
                 <!-- hidden input file -->
-                <!-- kementrian/lembaga input -->
-                <div class="form-horizontal" id="kementrianInputs" style="display: none;">
+                <div class="form-horizontal" id="suratPermohonanInput" style="display: none;">
                     <div class="row mb-3" id="suratPermohonanInput">
-                        <label for="surat_permohonan_kementrian" class="col-sm-3 col-form-label">Surat Permohonan Kerja Sama</label>
+                        <label for="surat_permohonan" class="col-sm-3 col-form-label">Surat Permohonan Kerja Sama</label>
                         <div class="col-sm-5">
-                            <input type="file" class="form-control" id="surat_permohonan_kementrian" name="surat_permohonan_kementrian">
-                        </div>
-                    </div>
-                    <div class="row mb-3" id="draftKerjasamaInput">
-                        <label for="draft_kerjasama_kementrian" class="col-sm-3 col-form-label">Draft Kerja Sama</label>
-                        <div class="col-sm-5">
-                            <input type="file" class="form-control" id="draft_kerjasama_kementrian" name="draft_kerjasama_kementrian">
+                            <input type="file" class="form-control" id="surat_permohonan" name="surat_permohonan">
                         </div>
                     </div>
                 </div>
-                <!-- universitas/perguruan tinggi input -->
-                <div class="form-horizontal" id="universitasInputs" style="display: none;">
-                    <div class="row mb-3" id="suratPermohonanInput">
-                        <label for="surat_permohonan_universitas" class="col-sm-3 col-form-label">Surat Permohonan Kerja Sama</label>
-                        <div class="col-sm-5">
-                            <input type="file" class="form-control" id="surat_permohonan_universitas" name="surat_permohonan_universitas">
-                        </div>
-                    </div>
+                <div class="form-horizontal" id="profilMitraInput" style="display: none;">
                     <div class="row mb-3" id="profilMitraInput">
-                        <label for="profil_mitra_universitas" class="col-sm-3 col-form-label">Profil Mitra</label>
+                        <label for="profil_mitra" class="col-sm-3 col-form-label">Profil Mitra</label>
                         <div class="col-sm-5">
-                            <input type="file" class="form-control" id="profil_mitra_universitas" name="profil_mitra_universitas">
-                        </div>
-                    </div>
-                    <div class="row mb-3" id="draftKerjasamaInput">
-                        <label for="draft_kerjasama_universitas" class="col-sm-3 col-form-label">Draft Kerja Sama</label>
-                        <div class="col-sm-5">
-                            <input type="file" class="form-control" id="draft_kerjasama_universitas" name="draft_kerjasama_universitas">
+                            <input type="file" class="form-control" id="profil_mitra" name="profil_mitra">
                         </div>
                     </div>
                 </div>
-                <!-- ormas input -->
-                <div class="form-horizontal" id="ormasInputs" style="display: none;">
-                    <div class="row mb-3" id="suratPermohonanInput">
-                        <label for="surat_permohonan_ormas" class="col-sm-3 col-form-label">Surat Permohonan Kerja Sama</label>
-                        <div class="col-sm-5">
-                            <input type="file" class="form-control" id="surat_permohonan_ormas" name="surat_permohonan_ormas">
-                        </div>
-                    </div>
-                    <div class="row mb-3" id="profilMitraInput">
-                        <label for="profil_mitra_ormas" class="col-sm-3 col-form-label">Profil Mitra</label>
-                        <div class="col-sm-5">
-                            <input type="file" class="form-control" id="profil_mitra_ormas" name="profil_mitra_ormas">
-                        </div>
-                    </div>
+                <div class="form-horizontal" id="draftKerjasamaInput" style="display: none;">
                     <div class="row mb-3" id="draftKerjasamaInput">
-                        <label for="draft_kerjasama_ormas" class="col-sm-3 col-form-label">Draft Kerja Sama</label>
+                        <label for="draft_kerjasama" class="col-sm-3 col-form-label">Draft Kerja Sama</label>
                         <div class="col-sm-5">
-                            <input type="file" class="form-control" id="draft_kerjasama_ormas" name="draft_kerjasama_ormas">
+                            <input type="file" class="form-control" id="draft_kerjasama" name="draft_kerjasama">
                         </div>
                     </div>
+                </div>
+                <div class="form-horizontal" id="ormasInput" style="display: none;">
                     <div class="row mb-3" id="skKumhamInput">
                         <label for="sk_kumham" class="col-sm-3 col-form-label">SK KumHam</label>
                         <div class="col-sm-5">
@@ -406,7 +375,7 @@
                             <input type="file" class="form-control" id="surat_komitmen" name="surat_komitmen">
                         </div>
                     </div>
-                </div> 
+                </div>
                 <!-- button -->
                 <button type="submit" class="btn btn-success mb-3" >Simpan</button>
                 <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/') ?>';">Kembali</button>
@@ -458,19 +427,25 @@
     });
 
     document.getElementById('jenis_mitra').addEventListener('change', function() {
-        // Sembunyikan semua input
-        document.getElementById('kementrianInputs').style.display = 'none';
-        document.getElementById('universitasInputs').style.display = 'none';
-        document.getElementById('ormasInputs').style.display = 'none';
+    // Sembunyikan semua elemen di awal
+    document.getElementById('suratPermohonanInput').style.display = 'none';
+    document.getElementById('profilMitraInput').style.display = 'none';
+    document.getElementById('draftKerjasamaInput').style.display = 'none';
+    document.getElementById('ormasInput').style.display = 'none';
+    
+    // Tampilkan form umum
+    if (this.value === 'Kementrian/Lembaga' || this.value === 'Universitas/Perguruan Tinggi' || this.value === 'Ormas/LSM') {
+        document.getElementById('suratPermohonanInput').style.display = 'block';
+        document.getElementById('draftKerjasamaInput').style.display = 'block';
 
-        // Tampilkan input sesuai pilihan
         if (this.value === 'Kementrian/Lembaga') {
-            document.getElementById('kementrianInputs').style.display = 'block';
         } else if (this.value === 'Universitas/Perguruan Tinggi') {
-            document.getElementById('universitasInputs').style.display = 'block';
+            document.getElementById('profilMitraInput').style.display = 'block';
         } else if (this.value === 'Ormas/LSM') {
-            document.getElementById('ormasInputs').style.display = 'block';
+            document.getElementById('profilMitraInput').style.display = 'block';
+            document.getElementById('ormasInput').style.display = 'block';
         }
+    }
     });
 </script>
 <?= $this->endsection(''); ?>

@@ -64,20 +64,20 @@ class Uploaddok extends BaseController
 
         if ($kategori == 'Kementrian/Lembaga') {
             $fileInputs = [
-                'surat_permohonan_kementrian' => 'surat_permohonan',
-                'draft_kerjasama_kementrian' => 'draft_kerjasama'
+                'surat_permohonan' => 'surat_permohonan',
+                'draft_kerjasama' => 'draft_kerjasama'
             ];
         } elseif ($kategori == 'Universitas/Perguruan Tinggi') {
             $fileInputs = [
-                'surat_permohonan_universitas' => 'surat_permohonan',
-                'profil_mitra_universitas' => 'profil_mitra',
-                'draft_kerjasama_universitas' => 'draft_kerjasama'
+                'surat_permohonan' => 'surat_permohonan',
+                'profil_mitra' => 'profil_mitra',
+                'draft_kerjasama' => 'draft_kerjasama'
             ];
         } elseif ($kategori == 'Ormas/LSM') {
             $fileInputs = [
-                'surat_permohonan_ormas' => 'surat_permohonan',
-                'profil_mitra_ormas' => 'profil_mitra',
-                'draft_kerjasama_ormas' => 'draft_kerjasama',
+                'surat_permohonan' => 'surat_permohonan',
+                'profil_mitra' => 'profil_mitra',
+                'draft_kerjasama' => 'draft_kerjasama',
                 'sk_kumham' => 'sk_kumham',
                 'surat_komitmen' => 'surat_komitmen'
             ];
@@ -111,7 +111,7 @@ class Uploaddok extends BaseController
         }
 
         $this->statusvdModel->save($data);
-
+        
         return redirect()->to('pages/ses/statusvd')->with('message', 'Data berhasil disimpan');
     }
  
