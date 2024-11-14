@@ -15,7 +15,7 @@
                 <th scope="col">Alamat</th>
                 <th scope="col">Kontak</th>
                 <th scope="col">Status</th>
-                <th scope="col-2">Aksi</th>
+                <th scope="col">Aksi</th>
                 </tr>
             </thead>
             <tbody class="table-light">
