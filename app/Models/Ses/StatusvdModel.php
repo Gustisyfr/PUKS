@@ -24,6 +24,7 @@ class StatusvdModel extends Model
         'bentuk_kerjasama',
         'kerjasama_lain',
         'bentuk_dukungan',
+        'status_verifikasi',
         'uraian',
         'surat_permohonan',
         'profil_mitra',
@@ -46,5 +47,10 @@ class StatusvdModel extends Model
                     ->join('statusvm', 'statusvd.nama_mitra = statusvm.nama_mitra AND statusvd.jenis_mitra = statusvm.jenis_mitra', 'left')
                     ->get()
                     ->getResultArray();
+    }
+
+    public function getById($id)
+    {
+        return $this->where('id', $id)->first();
     }
 }

@@ -18,5 +18,10 @@ class StatusvmModel extends Model
         'status_verifikasi'
     ];
 
+    public function getById($id)
+    {
+        return $this->where('id', $id)->first();
+    }
+
 
 }  

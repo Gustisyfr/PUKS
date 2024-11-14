@@ -16,10 +16,9 @@ class Verifikasim extends BaseController
 
     public function edit($id)
     {
-        // Mengambil data mitra berdasarkan ID
+        // mengambil data mitra berdasarkan id
         $statusvm = $this->statusvmModel->find($id);
 
-        // Kirim data ke view
         $data = [
             'title' => 'Verifikasi Mitra',
             'mitra' => $statusvm
@@ -30,23 +29,16 @@ class Verifikasim extends BaseController
 
     public function update()
     {
-        // Mendapatkan ID mitra
         $id = $this->request->getPost('id_mitra');
 
-        // Mengambil status verifikasi dari form
         $status = $this->request->getPost('status_verifikasi');
 
-         // Periksa apakah ID dan status tidak kosong
         if ($id && $status) {
-        // Update status verifikasi di database
         $this->statusvmModel->update($id, [
             'status_verifikasi' => $status
         ]);
-
-        // Redirect ke halaman status verifikasi mitra
         return redirect()->to('/pages/admin/statusvm')->with('message', 'Status verifikasi berhasil diupdate.');
         } else {
-        // Jika ID atau status tidak ada, tampilkan error
         return redirect()->back()->with('error', 'Tidak ada data untuk diupdate.');
         }
     }    
