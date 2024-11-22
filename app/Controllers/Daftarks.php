@@ -28,10 +28,9 @@ class Daftarks extends BaseController
         if (!$this->validate([
             'nama_mitra' => [
                 'label' => 'Nama Mitra',
-                'rules' => 'required|alpha_space',
+                'rules' => 'required',
                 'errors' => [
-                    'required' => '{field} harus diisi.',
-                    'alpha_space' => '{field} hanya boleh berisi huruf dan spasi.'
+                    'required' => '{field} harus diisi.'
                 ]
             ],
             'jenis_mitra' => [
