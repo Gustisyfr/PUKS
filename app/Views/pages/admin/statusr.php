@@ -11,8 +11,8 @@
                 <th scope="col">No</th>
                 <th scope="col">No Registrasi</th>
                 <th scope="col">Nama Mitra</th>
-                <th scope="col">Bentuk Kerja Sama</th>
                 <th scope="col">Jenis Mitra</th>
+                <th scope="col">Bentuk Kerja Sama</th>
                 <th scope="col">Bentuk Dukungan Program KKP</th>
                 <th scope="col">Status</th>
                 <th scope="col">Aksi</th>

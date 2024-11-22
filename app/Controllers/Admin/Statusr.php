@@ -23,4 +23,3 @@ class Statusr extends BaseController
 
     }
 }
-?>
