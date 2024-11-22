@@ -23,16 +23,19 @@
                 </select>
                 <div class="invalid-feedback"><?= $validation->getError('jenis_mitra'); ?></div>
                 </div>
+                <!-- alamat -->
                 <div class="form-group mb-3">
                     <label for="alamat" class="form-label">Alamat</label>
                     <textarea type="text" class="form-control <?= ($validation->hasError('alamat')) ? 'is-invalid' : ''; ?>" id="alamat" name="alamat" placeholder="Masukan Alamat Lengkap" rows="3"></textarea>
                     <div class="invalid-feedback"><?= $validation->getError('alamat'); ?></div>
                 </div>
+                <!-- email -->
                 <div class="form-group mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : ''; ?>" id="email" name="email" placeholder="Masukan email Aktif" value="<?= old('email'); ?>">
                     <div class="invalid-feedback"><?= $validation->getError('email'); ?></div>
                 </div>
+                <!-- no telepon -->
                 <div class="form-group mb-3">
                     <label for="notel" class="form-label">Nomor Telepon</label>
                     <input type="tel" class="form-control <?= ($validation->hasError('notel')) ? 'is-invalid' : ''; ?>" id="notel" name="notel" placeholder="Masukan Nomor Telepon Aktif" value="<?= old('notel'); ?>">

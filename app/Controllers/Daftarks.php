@@ -100,4 +100,3 @@ class Daftarks extends BaseController
     }
 
 }
-?>
