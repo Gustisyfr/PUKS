@@ -27,6 +27,7 @@ $routes->post('/pages/ses/uploaddok', 'Ses\Uploaddok::index');
 $routes->post('/uploaddok/save', 'Ses\Uploaddok::save');
 $routes->get('/pages/ses/statusvd', 'Ses\Statusvd::index');
 $routes->post('/pages/ses/statusvd', 'Ses\Statusvd::index');
+$routes->post('/ses/statusvd/verify/(:num)', 'Ses\Statusvd::verify/$1');
 $routes->delete('/ses/statusvd/(:num)', 'Ses\Statusvd::delete/$1');
 $routes->get('/pages/ses/verifikasidok/(:num)', 'Ses\Verifikasidok::edit/$1');
 $routes->post('/pages/ses/verifikasidok/update', 'Ses\Verifikasidok::update');

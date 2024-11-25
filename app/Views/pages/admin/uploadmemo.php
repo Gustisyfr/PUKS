@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="mt-3">Rekomendasi dan Upload Memo </h2>
+            <h2 class="my-3">Rekomendasi dan Upload Memo </h2>
             <form>
             <fieldset disabled>
                 <div class="mb-3">

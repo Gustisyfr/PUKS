@@ -37,7 +37,7 @@
                     <?php if($r['status_rekomendasi'] == 'Direkomendasikan'): ?>
                         <button type="button" class="btn btn-success me-auto btn-custom">Direkomendasikan</button>
                     <?php elseif($r['status_rekomendasi'] == 'Belum Direkomendasikan'): ?>
-                        <button type="button" class="btn btn-danger me-auto btn-custom">Belum Direkomendasikan</button>
+                        <button type="button" class="btn btn-danger me-auto btn-custom" style="font-size: x-small;">Belum Direkomendasikan</button>
                     <?php elseif($r['status_rekomendasi'] == 'Revisi'): ?>
                         <button type="button" class="btn btn-danger me-auto btn-custom">Revisi</button>
                     <?php else: ?>

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h3 class="mt-3">"Selamat Anda Telah Terdaftar"</h3>
+            <h3 class="my-3">"Selamat Anda Telah Terdaftar"</h3>
             <form>
             <fieldset disabled>
                 <div class="mb-3">

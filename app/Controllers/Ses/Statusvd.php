@@ -4,14 +4,17 @@ namespace App\Controllers\Ses;
 
 use App\Controllers\BaseController;
 use App\Models\Ses\StatusvdModel;
+use App\Models\Admin\StatusrModel;
 
 class Statusvd extends BaseController
 {
     protected $statusvdModel;
+    protected $statusrModel;
     
     public function __construct()
     {
         $this->statusvdModel = new StatusvdModel();
+        $this->statusrModel = new StatusrModel();
     }
 
     public function index()
@@ -26,6 +29,26 @@ class Statusvd extends BaseController
         return view('pages/ses/statusvd', $data);
         
     }
+
+    public function verify($id)
+    {
+        // ambil data dokumen yang akan diverifikasi
+        $document = $this->statusvdModel->getById($id);
+
+        if (!$document) {
+            return redirect()->back()->with('error', 'Dokumen tidak ditemukan.');
+        }
+
+        // update status verifikasi dokumen
+        $this->statusvdModel->update($id, ['status_verifikasi' => 'Terverifikasi']);
+
+        // simpan data ke statusr
+        $verifiedData = $this->statusvdModel->getVerifiedWithRegistrationNumber();
+        $this->statusrModel->saveFromStatusvd($verifiedData);
+
+        return redirect()->to('/pages/ses/statusvd')->with('success', 'Dokumen berhasil diverifikasi.');
+    }
+
 
     public function delete($id)
     {

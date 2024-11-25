@@ -7,6 +7,7 @@ use App\Models\Admin\StatusrModel;
 class Statusr extends BaseController
 {
     protected $statusrModel;
+
     public function __construct()
     {
         $this->statusrModel = new StatusrModel();   
@@ -15,6 +16,7 @@ class Statusr extends BaseController
     public function index()
     {
         $statusr = $this->statusrModel->findAll();
+
         $data=[
             'title' => 'Status Rekomendasi',
             'statusr' => $statusr
@@ -22,4 +24,5 @@ class Statusr extends BaseController
         return view ('pages/admin/statusr', $data);
 
     }
+
 }

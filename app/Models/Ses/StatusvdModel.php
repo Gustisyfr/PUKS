@@ -49,6 +49,21 @@ class StatusvdModel extends Model
                     ->getResultArray();
     }
 
+    public function getVerifiedWithRegistrationNumber()
+    {
+        return $this->select('statusvd.*, statusvm.nomor_registrasi')
+                    ->join('statusvm', 'statusvd.nama_mitra = statusvm.nama_mitra AND statusvd.jenis_mitra = statusvm.jenis_mitra', 'left')
+                    ->where('statusvd.status_verifikasi', 'Terverifikasi')
+                    ->whereNotIn('statusvd.id', function ($builder) {
+                        return $builder->select('statusvd.id')
+                                    ->from('statusvd')
+                                    ->join('statusr', 'statusvd.nomor_registrasi = statusr.nomor_registrasi');
+                    })
+                    ->get()
+                    ->getResultArray();
+    }
+
+
     public function getById($id)
     {
         return $this->where('id', $id)->first();
