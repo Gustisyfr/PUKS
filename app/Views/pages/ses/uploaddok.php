@@ -11,7 +11,7 @@
                 <div class="form-group mb-3">
                     <label for="unit_organisasi" class="form-label">Unit Organisasi Pelaksana</label>
                     <select class="form-select" id="unit_organisasi" name="unit_organisasi" aria-label="Default select example" required>
-                        <option>Pilih Unit Organisasi Pelaksana</option>
+                        <option value="">Pilih Unit Organisasi Pelaksana</option>
                         <option value="Sekretariat Jendral">Sekretariat Jendral</option>
                         <option value="Direktorat Jenderal Pengelolaan Kelautan dan Ruang Laut">Direktorat Jenderal Pengelolaan Kelautan dan Ruang Laut</option>
                         <option value="Direktorat Jenderal Perikanan Tangkap">Direktorat Jenderal Perikanan Tangkap</option>
@@ -27,7 +27,7 @@
                 <div class="form-group mb-3 hidden-dropdown" id="setjenDropdown" style="display: none;">
                     <label for="setjenSelect" class="form-label">Satker Sekretariat Jendral</label>
                     <select name="satker_upt_1" class="form-select" id="setjenSelect" aria-label="Default select example">
-                        <option>Pilih Satker Sekretariat Jendral</option>
+                        <option value="">Pilih Satker Sekretariat Jendral</option>
                         <!-- ESELON II -->
                         <option value="Biro Perencanaan">Biro Perencanaan</option>
                         <option value="Biro Keuangan dan Barang Milik Negara">Biro Keuangan dan Barang Milik Negara</option>
@@ -40,7 +40,7 @@
                 <div class="form-group mb-3 hidden-dropdown" id="djprlDropdown" style="display: none;">
                     <label for="djprlSelect" class="form-label">Satker/UPT Direktorat Jenderal Pengelolaan Kelautan dan Ruang Laut</label>
                     <select name="satker_upt_2" class="form-select" id="djprlSelect" aria-label="Default select example">
-                        <option>Pilih Satker/UPT Direktorat Jenderal Pengelolaan Kelautan dan Ruang Laut</option>
+                        <option value="">Pilih Satker/UPT Direktorat Jenderal Pengelolaan Kelautan dan Ruang Laut</option>
                         <!-- ESELON II -->
                         <option value="Sekretariat Direktorat Jenderal Pengelolaan Kelautan dan Ruang Laut">Sekretariat Direktorat Jenderal Pengelolaan Kelautan dan Ruang Laut</option>
                         <option value="Direktorat Penataan Ruang Laut">Direktorat Penataan Ruang Laut</option>
@@ -61,7 +61,7 @@
                 <div class="form-group mb-3 hidden-dropdown" id="djptDropdown" style="display: none;">
                     <label for="djptSelect" class="form-label">Satker/UPT Direktorat Jenderal Perikanan Tangkap</label>
                     <select name="satker_upt_3" class="form-select" id="djptSelect" aria-label="Default select example">
-                        <option>Pilih Satker/UPT Direktorat Jenderal Perikanan Tangkap</option>
+                        <option value="">Pilih Satker/UPT Direktorat Jenderal Perikanan Tangkap</option>
                         <!-- ESELON II -->
                         <option value="Sekretariat Direktorat Jenderal Perikanan Tangkap">Sekretariat Direktorat Jenderal Perikanan Tangkap</option>
                         <option value="Direktorat Pengelolaan Sumber Daya Ikan">Direktorat Pengelolaan Sumber Daya Ikan</option>
@@ -97,7 +97,7 @@
                 <div class="form-group mb-3 hidden-dropdown" id="djpbDropdown" style="display: none;">
                     <label for="djpbSelect" class="form-label">Satker/UPT Direktorat Jenderal Perikanan Budidaya</label>
                     <select name="satker_upt_4" class="form-select" id="djpbSelect" aria-label="Default select example">
-                        <option>Pilih Satker/UPT Direktorat Jenderal Perikanan Budidaya</option>
+                        <option value="">Pilih Satker/UPT Direktorat Jenderal Perikanan Budidaya</option>
                         <!-- ESELON II -->
                         <option value="Sekretariat Direktorat Jenderal Perikanan Budidaya">Sekretariat Direktorat Jenderal Perikanan Budidaya</option>
                         <option value="Direktorat Ikan Air Tawar">Direktorat Ikan Air Tawar</option>
@@ -119,7 +119,7 @@
                 <div class="form-group mb-3 hidden-dropdown" id="djpdspkpDropdown" style="display: none;">
                     <label for="djpdspkpSelect" class="form-label">Satker/UPT Direktorat Jenderal Penguatan Daya Saing Produk Kelautan dan Perikanan</label>
                     <select name="satker_upt_5" class="form-select" id="djpdspkpSelect" aria-label="Default select example">
-                        <option>Pilih Satker/UPT Direktorat Jenderal Penguatan Daya Saing Produk Kelautan dan Perikanan</option>
+                        <option value="">Pilih Satker/UPT Direktorat Jenderal Penguatan Daya Saing Produk Kelautan dan Perikanan</option>
                         <!-- ESELON II -->
                         <option value="Sekretariat Direktorat Jenderal Penguatan Daya Saing Produk Kelautan dan Perikanan">Sekretariat Direktorat Jenderal Penguatan Daya Saing Produk Kelautan dan Perikanan</option>
                         <option value="Direktorat Logistik">Direktorat Logistik</option>
@@ -133,7 +133,7 @@
                 <div class="form-group mb-3 hidden-dropdown" id="djpsdkpDropdown" style="display: none;">
                     <label for="djpsdkpSelect" class="form-label">Satker/UPT Direktorat Jenderal Pengawasan Sumber Daya Kelautan dan Perikanan</label>
                     <select name="satker_upt_6" class="form-select" id="djpsdkpSelect" aria-label="Default select example">
-                        <option>Pilih Satker/UPT Direktorat Jenderal Pengawasan Sumber Daya Kelautan dan Perikanan</option>
+                        <option value="">Pilih Satker/UPT Direktorat Jenderal Pengawasan Sumber Daya Kelautan dan Perikanan</option>
                         <!-- ESELON II -->
                         <option value="Sekretariat Direktorat Jenderal Pengawasan Sumber Daya Kelautan dan Perikanan">Sekretariat Direktorat Jenderal Pengawasan Sumber Daya Kelautan dan Perikanan</option>
                         <option value="Direktorat Pengendalian Operasi Armada">Direktorat Pengendalian Operasi Armada</option>
@@ -160,7 +160,7 @@
                 <div class="form-group mb-3 hidden-dropdown" id="itjenDropdown" style="display: none;">
                     <label for="itjenSelect" class="form-label">Satker Inspektorat Jenderal</label>
                     <select name="satker_upt_7" class="form-select" id="itjenSelect" aria-label="Default select example">
-                        <option>Pilih Satker Inspektorat Jenderal</option>
+                        <option value="">Pilih Satker Inspektorat Jenderal</option>
                         <!-- ESELON II -->
                         <option value="Sekretariat Inspektorat Jenderal">Sekretariat Inspektorat Jenderal</option>
                         <option value="Inspektorat I">Inspektorat I</option>   
@@ -173,7 +173,7 @@
                 <div class="form-group mb-3 hidden-dropdown" id="bppsdmkpDropdown" style="display: none;">
                     <label for="bppsdmkpSelect" class="form-label">Satker/UPT Badan Penyuluhan dan Pengembangan Sumber Daya Manusia Kelautan dan Perikanan</label>
                     <select name="satker_upt_8" class="form-select" id="bppsdmkpSelect" aria-label="Default select example">
-                        <option>Pilih Satker/UPT Badan Penyuluhan dan Pengembangan Sumber Daya Manusia Kelautan dan Perikanan</option>
+                        <option value="">Pilih Satker/UPT Badan Penyuluhan dan Pengembangan Sumber Daya Manusia Kelautan dan Perikanan</option>
                         <!-- ESELON II -->
                         <option value="Sekretariat Badan Penyuluhan dan Pengembangan Sumber Daya Manusia Kelautan dan Perikanan">Sekretariat Badan Penyuluhan dan Pengembangan Sumber Daya Manusia Kelautan dan Perikanan</option>
                         <option value="Pusat Penyuluhan Kelautan dan Perikanan">Pusat Penyuluhan Kelautan dan Perikanan</option>   
@@ -226,7 +226,7 @@
                 <div class="form-group mb-3 hidden-dropdown" id="bppmhkpDropdown" style="display: none;">
                     <label for="bppmhkpSelect" class="form-label">Satker/UPT Badan Pengendalian dan Pengawasan Mutu Hasil Kelautan dan Perikanan</label>
                     <select name="satker_upt_9" class="form-select" id="bppmhkpSelect" aria-label="Default select example">
-                        <option>Pilih Satker/UPT Badan Pengendalian dan Pengawasan Mutu Hasil Kelautan dan Perikanan</option>
+                        <option value="">Pilih Satker/UPT Badan Pengendalian dan Pengawasan Mutu Hasil Kelautan dan Perikanan</option>
                         <!-- ESELON II -->
                         <option value="Sekretariat Badan Pengendalian dan Pengawasan Mutu Hasil Kelautan dan Perikanan">Sekretariat Badan Pengendalian dan Pengawasan Mutu Hasil Kelautan dan Perikanan</option>
                         <option value="Pusat Manajemen Mutu">Pusat Manajemen Mutu</option>   
@@ -286,7 +286,7 @@
                 <div class="form-group mb-3">
                     <label for="jenis_mitra" class="form-label">Jenis Mitra</label>
                     <select class="form-select" id="jenis_mitra" name="jenis_mitra" aria-label="Default select example" required>
-                        <option>Pilih Jenis Mitra</option>
+                        <option value="">Pilih Jenis Mitra</option>
                         <option value="Kementrian/Lembaga">Kementrian/Lembaga</option>
                         <option value="Universitas/Perguruan Tinggi">Universitas/Perguruan Tinggi</option>
                         <option value="Ormas/LSM">Ormas/LSM</option>
@@ -296,14 +296,14 @@
                 <div class="form-group mb-3">
                     <label for="nama_mitra" class="form-label">Nama Mitra</label>
                     <select class="form-select" id="nama_mitra" name="nama_mitra" aria-label="Default select example" required>
-                        <option>Pilih Nama Mitra</option>
+                        <option value="">Pilih Nama Mitra</option>
                     </select>
                 </div>
                 <!-- bentuk kerjasama -->
                 <div class="form-group mb-3">
                     <label for="bentuk_kerjasama" class="form-label">Bentuk Kerjasama</label>
                     <select class="form-select" id="bentuk_kerjasama" name="bentuk_kerjasama" aria-label="Default select example" required>
-                        <option>Pilih Bentuk Kerjasama</option>
+                        <option value="">Pilih Bentuk Kerjasama</option>
                         <option value="Kesepakatan Bersama">Kesepakatan Bersama</option>
                         <option value="Nota Kesepahaman">Nota Kesepahaman</option>
                         <option value="Nota Kesepakatan">Nota Kesepakatan</option>
@@ -321,7 +321,7 @@
                 <div class="form-group mb-3">
                     <label for="bentuk_dukungan" class="form-label">Bentuk Dukungan Program KKP</label>
                     <select class="form-select" id="bentuk_dukungan" name="bentuk_dukungan" aria-label="Default select example" required>
-                        <option>Pilih Bentuk Dukungan</option>
+                        <option value="">Pilih Bentuk Dukungan</option>
                         <option>--5 Kebijakan Ekonomi Biru--</option>
                         <option value="Perluasan Kawasan Konservasi Laut">Perluasan Kawasan Konservasi Laut</option>
                         <option value="Penangkapan Ikan Terukur Berbasis Kuota">Penangkapan Ikan Terukur Berbasis Kuota</option>

@@ -47,7 +47,7 @@
                         <input class="form-control" type="text" value="<?= $mitra['bentuk_kerjasama']; ?>" disabled readonly>
                     </div>
                     <!-- hidden disable input kerjasama lain -->
-                    <div class="mb-3" style="display: <?= $mitra['bentuk_kerjasama'] == 'Lain-Lain' ? 'block' : 'none'; ?>">
+                    <div class="mb-3" style="display: <?= $mitra['bentuk_kerjasama'] == 'Lain-lain' ? 'block' : 'none'; ?>">
                         <label for="disabledTextInput" class="form-label">Bentuk Kerja Sama Lain</label>
                         <input class="form-control" type="text" value="<?= $mitra['kerjasama_lain']; ?>" disabled readonly>
                     </div>
