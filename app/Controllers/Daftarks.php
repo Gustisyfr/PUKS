@@ -94,7 +94,6 @@ class Daftarks extends BaseController
             'notel' => $this->request->getVar('notel')
         ];
 
-        
         return view('pages/daftarksout', $data);
     }
 

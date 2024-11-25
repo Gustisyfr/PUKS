@@ -19,22 +19,27 @@
                 </tr>
             </thead>
             <tbody class="table-light">
+                <?php if (empty($statusvm)): ?>
+                    <tr>
+                        <td colspan="12" class="text-center" style="font-size: xx-large; font-weight: bold; color: red;">Tidak ada data!</td>
+                    </tr>
+                <?php else: ?>
                 <?php $i=1; ?>
                 <?php foreach($statusvm as $vm) : ?>
                 <tr>
                 <th scope="row" class="text-center"><?= $i++; ?></th>
-                <td><?= $vm['nomor_registrasi']; ?></td>
+                <td style="font-size: small;"><?= $vm['nomor_registrasi']; ?></td>
                 <td><?= $vm['nama_mitra']; ?></td>
                 <td><?= $vm['jenis_mitra']; ?></td>
                 <td><?= $vm['alamat']; ?></td>
                 <td><?= $vm['email']; ?><p><?= $vm['notel']; ?></p></td>
                 <td>
                     <?php if($vm['status_verifikasi'] == 'Terverifikasi'): ?>
-                        <button type="button" class="btn btn-success mb-3 btn-custom">Terverifikasi</button>
+                        <button type="button" class="btn btn-success me-auto btn-custom">Terverifikasi</button>
                     <?php elseif($vm['status_verifikasi'] == 'Tidak Terverifikasi'): ?>
-                        <button type="button" class="btn btn-danger mb-3 btn-custom">Tidak Terverifikasi</button>
+                        <button type="button" class="btn btn-danger me-auto btn-custom">Tidak Terverifikasi</button>
                     <?php else: ?>
-                        <button type="button" class="btn btn-secondary mb-3 btn-custom">Menunggu Verifikasi</button>
+                        <button type="button" class="btn btn-secondary me-auto btn-custom">Menunggu Verifikasi</button>
                     <?php endif; ?>
                 </td>
                 <td> 
@@ -59,6 +64,7 @@
                 </td>   
                 </tr>
                 <?php endforeach; ?>
+                <?php endif; ?>
             </tbody>
             </table>
             <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/') ?>';">Kembali</button>

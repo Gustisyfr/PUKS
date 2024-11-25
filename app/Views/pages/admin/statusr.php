@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="mt-3">Status Rekomendasi</h2>
+            <h2 class="my-3">Status Rekomendasi</h2>
             <table class="table table-bordered">
             <thead class="table-dark text-center align-middle">
                 <tr>
@@ -18,25 +18,30 @@
                 <th scope="col">Aksi</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-light">
+                <?php if (empty($statusr)): ?>
+                    <tr>
+                        <td colspan="12" class="text-center" style="font-size: xx-large; font-weight: bold; color: red;">Tidak ada data!</td>
+                    </tr>
+                <?php else: ?>
                 <?php $i=1; ?>
                 <?php foreach($statusr as $r) : ?>
                 <tr>
                 <th scope="row" class="text-center"><?= $i++; ?></th>
-                <td><?= $r['nomor_registrasi']; ?></td>
+                <td style="font-size: small;"><?= $r['nomor_registrasi']; ?></td>
                 <td><?= $r['nama_mitra']; ?></td>
                 <td><?= $r['jenis_mitra']; ?></td>
                 <td><?= $r['bentuk_kerjasama']; ?></td>
                 <td><?= $r['bentuk_dukungan']; ?></td>
                 <td>
                     <?php if($r['status_rekomendasi'] == 'Direkomendasikan'): ?>
-                        <button type="button" class="btn btn-success mb-3 btn-custom">Direkomendasikan</button>
+                        <button type="button" class="btn btn-success me-auto btn-custom">Direkomendasikan</button>
                     <?php elseif($r['status_rekomendasi'] == 'Belum Direkomendasikan'): ?>
-                        <button type="button" class="btn btn-danger mb-3 btn-custom">Belum Direkomendasikan</button>
+                        <button type="button" class="btn btn-danger me-auto btn-custom">Belum Direkomendasikan</button>
                     <?php elseif($r['status_rekomendasi'] == 'Revisi'): ?>
-                        <button type="button" class="btn btn-danger mb-3 btn-custom">Revisi</button>
+                        <button type="button" class="btn btn-danger me-auto btn-custom">Revisi</button>
                     <?php else: ?>
-                        <button type="button" class="btn btn-secondary mb-3 btn-custom">Menunggu Verifikasi</button>
+                        <button type="button" class="btn btn-secondary me-auto btn-custom">Menunggu Rekomendasi</button>
                     <?php endif; ?>
                 </td>
                 <td> 
@@ -61,6 +66,7 @@
                 </td>
                 </tr>
                 <?php endforeach; ?>
+                <?php endif; ?>
             </tbody>
             </table>
             <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/') ?>';">Kembali</button>
