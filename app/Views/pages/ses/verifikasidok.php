@@ -39,7 +39,7 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="disabledTextInput" class="form-label">Satuan Kerja/UPT</label>
+                        <label for="disabledTextInput" class="form-label">Nama Mitra</label>
                         <input class="form-control" type="text" value="<?= $mitra['nama_mitra']; ?>" disabled readonly>
                     </div>
                     <div class="mb-3">
