@@ -19,7 +19,7 @@ class Verifikasim extends BaseController
         $statusvm = $this->statusvmModel->find($id);
 
         if (!$statusvm) {
-            throw new \CodeIgniter\Exceptions\PageNotFoundException("Mitra dengan ID statusvm {$id} tidak ditemukan");
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("Mitra dengan ID {$id} tidak ditemukan");
         }
 
         $data = [
@@ -37,13 +37,13 @@ class Verifikasim extends BaseController
         $status = $this->request->getPost('status_verifikasi');
 
         if ($id && $status) {
-        $this->statusvmModel->update($id, [
-            'status_verifikasi' => $status
-        ]);
-        return redirect()->to('/pages/admin/statusvm')->with('message', 'Status verifikasi berhasil diupdate.');
-        } else {
-        return redirect()->back()->with('error', 'Tidak ada data untuk diupdate.');
-        }
+            $this->statusvmModel->update($id, [
+                'status_verifikasi' => $status
+            ]);
+            return redirect()->to('/pages/admin/statusvm')->with('message', 'Status verifikasi berhasil diupdate.');
+            } else {
+            return redirect()->back()->with('error', 'Tidak ada data untuk diupdate.');
+            }
     }    
 
 }
