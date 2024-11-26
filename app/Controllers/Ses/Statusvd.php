@@ -32,10 +32,10 @@ class Statusvd extends BaseController
 
     public function verify($id)
     {
-        // ambil data dokumen yang akan diverifikasi
-        $document = $this->statusvdModel->getById($id);
+        // ambil data mitra yang akan diverifikasi
+        $mitra = $this->statusvdModel->getById($id);
 
-        if (!$document) {
+        if (!$mitra) {
             return redirect()->back()->with('error', 'Dokumen tidak ditemukan.');
         }
 
