@@ -13,7 +13,8 @@
                 <th scope="col">Nama Mitra</th>
                 <th scope="col">Jenis Mitra</th>
                 <th scope="col">Bentuk Kerja Sama</th>
-                <th scope="col">Bentuk Dukungan Program KKP</th>
+                <th scope="col">Dukungan Program</th>
+                <th scope="col">Catatan</th>
                 <th scope="col">Status</th>
                 <th scope="col">Aksi</th>
                 </tr>
@@ -33,6 +34,7 @@
                 <td><?= $r['jenis_mitra']; ?></td>
                 <td><?= $r['bentuk_kerjasama']; ?></td>
                 <td><?= $r['bentuk_dukungan']; ?></td>
+                <td><?= $r['catatan']; ?></td>
                 <td>
                     <?php if($r['status_rekomendasi'] == 'Direkomendasikan'): ?>
                         <button type="button" class="btn btn-success me-auto btn-custom">Direkomendasikan</button>
