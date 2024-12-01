@@ -18,10 +18,10 @@ class StatusvmModel extends Model
         'status_verifikasi'
     ];
 
-    public function getById($id)
+    // memanggil data mitra sesuai dengan 'no. registrasi' di "status rekomendasi"
+    public function getByRegistrationNumber($nomorRegistrasi)
     {
-        return $this->where('id', $id)->first();
+        return $this->where('nomor_registrasi', $nomorRegistrasi)->first();
     }
-
 
 }  

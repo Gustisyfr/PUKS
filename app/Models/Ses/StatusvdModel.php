@@ -42,7 +42,7 @@ class StatusvdModel extends Model
         'bentuk_dukungan' => 'required'
     ];
     
-    // memanggil "no. registrasi" ke "status verifikasi dokumen" 
+    // memanggil 'no. registrasi' ke "status verifikasi dokumen" 
     public function getStatusvdWithRegistrationNumber()
     {
         return $this->select('statusvd.*, statusvm.nomor_registrasi')
@@ -65,9 +65,9 @@ class StatusvdModel extends Model
                     ->get()
                     ->getResultArray();
                     
-    }
+                }
                
-    // memanggil/join tabel statusvm dan statusvd ke upload dokumen
+    // memanggil/join tabel statusvm dan statusvd ke "upload dokumen"
     public function getMitraDetailById($id)
     {
         return $this->select('statusvd.*, statusvm.nomor_registrasi, statusvm.alamat, statusvm.email, statusvm.notel')

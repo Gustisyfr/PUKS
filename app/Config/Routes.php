@@ -5,8 +5,9 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Pages::index');
-$routes->get('/pages', 'Pages::index');
+// $routes->get('/', 'Login::index');
+$routes->get('/', 'Home::index');
+$routes->get('/home', 'Home::index');
 
 $routes->get('/pages/daftarks', 'Daftarks::index'); 
 $routes->post('/pages/daftarks', 'Daftarks::index');
@@ -24,10 +25,12 @@ $routes->post('/pages/admin/verifikasim/update', 'Admin\Verifikasim::update');
 
 $routes->get('/pages/admin/statusr', 'Admin\Statusr::index');
 $routes->post('/pages/admin/statusr', 'Admin\Statusr::index');
+$routes->delete('/admin/statusr/(:num)', 'Admin\Statusr::edit/$1');
 $routes->delete('/admin/statusr/(:num)', 'Admin\Statusr::delete/$1');
 
 $routes->get('/pages/admin/uploadmemo/(:num)', 'Admin\Uploadmemo::edit/$1');
 $routes->post('/pages/admin/uploadmemo/update', 'Admin\Uploadmemo::update');
+
 
 // routes SES
 $routes->get('/pages/ses/uploaddok', 'Ses\Uploaddok::index');

@@ -33,7 +33,10 @@
                 </div>
             </fieldset>
             </form>
-            <button type="button" class="btn btn-success mb-3" onclick="window.location.href='<?= base_url('/pages/admin/statusvm') ?>';">Selesai</button>
+            
+            <div>
+                <button type="button" class="btn btn-success mb-3" onclick="window.location.href='<?= base_url('/pages/admin/statusvm') ?>';">Selesai</button>
+            </div>
         </div>
     </div>
 </div>

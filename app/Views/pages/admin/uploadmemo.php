@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="my-3">Rekomendasi dan Upload Memo </h2>
-            <form action="pages/admin/uploadmemo/update" method="post" enctype="multipart/form-data">
+            <h2 class="my-4">Rekomendasi dan Upload Memo </h2>
+            <form action="<?= base_url('pages/admin/uploadmemo/update'); ?>" method="post" enctype="multipart/form-data">
             <?= csrf_field(); ?>
             <input type="hidden" name="id_mitra" value="<?= $mitra['id']; ?>">
             
@@ -19,8 +19,12 @@
                     <input class="form-control" type="text" value="<?= $mitra['nama_mitra']; ?>" disabled readonly>
                 </div>
                 <div class="mb-3">
-                    <label for="disabledTextInput" class="form-label">Jenis Mitra</label>
-                    <input class="form-control" type="text" value="<?= $mitra['jenis_mitra']; ?>" disabled readonly>
+                    <label for="jenis_mitra" class="form-label">Jenis Mitra</label>
+                    <select id="jenis_mitra" name="jenis_mitra" class="form-control" disabled readonly>
+                        <option value="Kementrian/Lembaga" <?= $mitra['jenis_mitra'] == 'Kementrian/Lembaga' ? 'selected' : ''; ?>>Kementrian/Lembaga</option>
+                        <option value="Universitas/Perguruan Tinggi" <?= $mitra['jenis_mitra'] == 'Universitas/Perguruan Tinggi' ? 'selected' : ''; ?>>Universitas/Perguruan Tinggi</option>
+                        <option value="Ormas/LSM" <?= $mitra['jenis_mitra'] == 'Ormas/LSM' ? 'selected' : ''; ?>>Ormas/LSM</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="disabledTextInput" class="form-label">Alamat</label>
@@ -53,18 +57,6 @@
                             $mitra['satker_upt_9']
                         ])); ?>" 
                         disabled readonly>
-                </div>
-                <div class="mb-3">
-                    <label for="jenis_mitra" class="form-label">Jenis Mitra</label>
-                    <select id="jenis_mitra" name="jenis_mitra" class="form-control" disabled readonly>
-                        <option value="Kementrian/Lembaga" <?= $mitra['jenis_mitra'] == 'Kementrian/Lembaga' ? 'selected' : ''; ?>>Kementrian/Lembaga</option>
-                        <option value="Universitas/Perguruan Tinggi" <?= $mitra['jenis_mitra'] == 'Universitas/Perguruan Tinggi' ? 'selected' : ''; ?>>Universitas/Perguruan Tinggi</option>
-                        <option value="Ormas/LSM" <?= $mitra['jenis_mitra'] == 'Ormas/LSM' ? 'selected' : ''; ?>>Ormas/LSM</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="disabledTextInput" class="form-label">Satuan Kerja/UPT</label>
-                    <input class="form-control" type="text" value="<?= $mitra['nama_mitra']; ?>" disabled readonly>
                 </div>
                 <div class="mb-3">
                     <label for="disabledTextInput" class="form-label">Bentuk Kerja Sama</label>
@@ -151,27 +143,34 @@
                 </div>
             </fieldset>
             
-            <div class="form-check form-check-inline mb-3">
+            <!-- button radio rekomendasi -->
+            <div class="form-check form-check-inline mb-4 mt-4">
                 <input class="form-check-input" type="radio" name="status_rekomendasi" id="direkomendasikan" value="Direkomendasikan" <?= $mitra['status_rekomendasi'] == 'Direkomendasikan' ? 'checked' : ''; ?>>
                 <label class="form-check-label" for="direkomendasikan">Direkomendasikan</label>
             </div>
-            <div class="form-check form-check-inline mb-3">
+            <div class="form-check form-check-inline mb-4 mt-4">
                 <input class="form-check-input" type="radio" name="status_rekomendasi" id="belum_direkomendasikan" value="Belum Direkomendasikan" <?= $mitra['status_rekomendasi'] == 'Belum Direkomendasikan' ? 'checked' : ''; ?>>
                 <label class="form-check-label" for="belum_direkomendasikan">Belum Direkomendasikan</label>
             </div>
-            <div class="form-check form-check-inline mb-3">
+            <div class="form-check form-check-inline mb-4 mt-4">
                 <input class="form-check-input" type="radio" name="status_rekomendasi" id="revisi" value="Revisi" <?= $mitra['status_rekomendasi'] == 'Revisi' ? 'checked' : ''; ?>>
                 <label class="form-check-label" for="revisi">Revisi</label>
             </div>
 
+            <!-- input catatan -->
             <div class="mb-3">
                 <label for="catatanFormControlTextarea1" class="form-label">Catatan :</label>
                 <textarea class="form-control" id="CatatanTextarea1" rows="3"></textarea>
             </div>
-            <div class="mb-3">
-                <label for="InputMemo" class="form-label">Upload Memo</label>
-                <input type="file" class="form-control" aria-label="file example" required>
-                <div class="invalid-feedback">Format file harus .PDF</div>
+            <!-- upload memo -->
+            <div class="form-horizontal">
+                <div class="row mb-3">
+                    <label for="InputMemo" class="col-sm-3 col-form-label">Upload Memo</label>
+                    <div class="col-sm-5">
+                        <input type="file" class="form-control" name="file_memo" id="InputMemo" aria-label="file example" required>
+                        <div class="invalid-feedback">Format file harus .PDF</div>
+                    </div>
+                </div>
             </div>
 
             <div>

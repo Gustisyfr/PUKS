@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="my-3">Status Rekomendasi</h2>
+            <h2 class="my-4">Status Rekomendasi</h2>
             <table class="table table-bordered">
             <thead class="table-dark text-center align-middle">
                 <tr>
@@ -34,7 +34,7 @@
                 <td><?= $r['jenis_mitra']; ?></td>
                 <td><?= $r['bentuk_kerjasama']; ?></td>
                 <td><?= $r['bentuk_dukungan']; ?></td>
-                <td><?= $r['catatan']; ?></td>
+                <td><?= $r['catatan']; ?><?= !empty($r['catatan']) ? $r['catatan'] : 'Tidak ada catatan'; ?></td>
                 <td>
                     <?php if($r['status_rekomendasi'] == 'Direkomendasikan'): ?>
                         <button type="button" class="btn btn-success me-auto btn-custom">Direkomendasikan</button>
@@ -71,7 +71,10 @@
                 <?php endif; ?>
             </tbody>
             </table>
-            <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/') ?>';">Kembali</button>
+            
+            <div>
+                <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/') ?>';">Kembali</button>
+            </div>
         </div>
     </div>
 </div>

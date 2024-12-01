@@ -42,7 +42,7 @@ class Statusvd extends BaseController
         // update status verifikasi dokumen
         $this->statusvdModel->update($id, ['status_verifikasi' => 'Terverifikasi']);
 
-        // simpan data ke statusr
+        // simpan data mitra yang terverifikasi ke statusr
         $verifiedData = $this->statusvdModel->getVerifiedWithRegistrationNumber();
         $this->statusrModel->saveFromStatusvd($verifiedData);
 

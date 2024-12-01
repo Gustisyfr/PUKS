@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="my-3">Daftar Kerja Sama</h2>
+            <h2 class="my-4">Daftar Kerja Sama</h2>
             <form action="/daftarks/save" method="post">
                 <?= csrf_field(); ?>
                 <!-- nama mitra -->
@@ -41,9 +41,12 @@
                     <input type="tel" class="form-control <?= ($validation->hasError('notel')) ? 'is-invalid' : ''; ?>" id="notel" name="notel" placeholder="Masukan Nomor Telepon Aktif" value="<?= old('notel'); ?>">
                     <div class="invalid-feedback"><?= $validation->getError('notel'); ?></div>
                 </div>
-                
-                <button type="submit" class="btn btn-success mb-3">Simpan</button>
-                <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/') ?>';">Kembali</button>
+            
+                <div>
+                    <button type="submit" class="btn btn-success mb-3">Simpan</button>
+                    <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/') ?>';">Kembali</button>
+                </div>
+
             </form>
         </div>
     </div>

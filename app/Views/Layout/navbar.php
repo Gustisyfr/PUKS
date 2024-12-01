@@ -1,3 +1,4 @@
+<!-- navbar -->
 <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
             <button class="btn me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar">

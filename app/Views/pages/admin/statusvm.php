@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="my-3">Status Verifikasi Mitra</h2>
+            <h2 class="my-4">Status Verifikasi Mitra</h2>
             <table class="table table-bordered">
             <thead class="table-dark text-center align-middle">
                 <tr>
@@ -67,7 +67,10 @@
                 <?php endif; ?>
             </tbody>
             </table>
-            <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/') ?>';">Kembali</button>
+            
+            <div>
+                <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/') ?>';">Kembali</button>
+            </div>
         </div>
     </div>
 </div>

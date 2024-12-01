@@ -4,10 +4,10 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h2 class="my-3">Verfikasi Dokumen Mitra</h2>
-            <form action="/pages/ses/verifikasidok/update" method="post">
+            <h2 class="my-4">Verfikasi Dokumen Mitra</h2>
+            <form action="<?= base_url('/pages/ses/verifikasidok/update'); ?>" method="post">
                 <?= csrf_field(); ?>
-                <input type="hidden" name="id_mitra" value="<?= $mitra['id']; ?>"> <!-- id mitra untuk identifikasi -->
+                <input type="hidden" name="id_mitra" value="<?= $mitra['id']; ?>">
                 
                 <fieldset disabled>
                     <div class="mb-3">
@@ -127,14 +127,16 @@
                     </div>      
                 </fieldset>
                 
-                <div class="form-check form-check-inline mb-3">
+                <!-- radio button verifikasi -->
+                <div class="form-check form-check-inline mb-4 mt-4">
                     <input class="form-check-input" type="radio" name="status_verifikasi" id="terverifikasi" value="Terverifikasi" <?= $mitra['status_verifikasi'] == 'Terverifikasi' ? 'checked' : ''; ?>>
                     <label class="form-check-label" for="terverifikasi">Terverifikasi</label>
                 </div>
-                <div class="form-check form-check-inline mb-3">
+                <div class="form-check form-check-inline mb-4 mt-4">
                     <input class="form-check-input" type="radio" name="status_verifikasi" id="revisi" value="Revisi" <?= $mitra['status_verifikasi'] == 'Revisi' ? 'checked' : ''; ?>>
                     <label class="form-check-label" for="revisi">Revisi</label>
                 </div>
+                
                 <div>
                     <button type="submit" class="btn btn-success mb-3">Simpan</button>
                     <button type="button" class="btn btn-danger mb-3" onclick="history.back();">Kembali</button>

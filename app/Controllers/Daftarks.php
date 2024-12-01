@@ -24,7 +24,6 @@ class Daftarks extends BaseController
 
     public function save()
     {
-        // validasi
         if (!$this->validate([
             'nama_mitra' => [
                 'label' => 'Nama Mitra',

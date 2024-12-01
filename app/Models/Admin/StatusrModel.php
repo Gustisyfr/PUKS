@@ -14,13 +14,15 @@ class StatusrModel extends Model
         'jenis_mitra',
         'bentuk_kerjasama',
         'bentuk_dukungan',
-        'status_rekomendasi'
+        'status_rekomendasi',
+        'catatan',
+        'file_memo'
     ];
 
+    // simpan data dari statusvd ke statusr
     public function saveFromStatusvd($data)
     {
         foreach ($data as $item) {
-            // cek apakah data sudah ada di tabel statusr
             $existing = $this->where('nomor_registrasi', $item['nomor_registrasi'])->first();
             if (!$existing) {
                 $this->save([
@@ -29,7 +31,7 @@ class StatusrModel extends Model
                     'jenis_mitra' => $item['jenis_mitra'],
                     'bentuk_kerjasama' => $item['bentuk_kerjasama'],
                     'bentuk_dukungan' => $item['bentuk_dukungan'],
-                    'status_rekomendasi' => 'Menunggu Rekomendasi'
+                    'status_rekomendasi' => ''
                 ]);
             }
         }

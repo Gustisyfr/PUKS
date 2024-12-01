@@ -3,7 +3,7 @@ namespace App\Controllers;
 
 class Daftarksout extends BaseController
 {
-        public function index()
+    public function index()
     {
         $data = [
             'title' => 'Summary Pendaftaran'  

@@ -34,17 +34,16 @@ class Verifikasidok extends BaseController
 
     public function update()
     {
-        // Ambil data dari form
         $id = $this->request->getPost('id_mitra');
         $status = $this->request->getPost('status_verifikasi');
 
         if ($id && $status) {
-            // Update status verifikasi di tabel statusvd
+            // update status verifikasi di tabel statusvd
             $this->statusvdModel->update($id, [
                 'status_verifikasi' => $status,
             ]);
 
-            // Jika status menjadi Terverifikasi, tambahkan ke tabel statusr
+            // jika terverifikasi, simpan ke tabel statusr
             if ($status === 'Terverifikasi') {
                 $mitra = $this->statusvdModel->getStatusvdWithRegistrationNumber();
                 $dataMitra = array_filter($mitra, fn($m) => $m['id'] == $id);
