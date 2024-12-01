@@ -30,7 +30,8 @@ class StatusvdModel extends Model
         'profil_mitra',
         'draft_kerjasama',
         'sk_kumham',
-        'surat_komitmen'
+        'surat_komitmen',
+        'id_statusvd' 
     ];
 
     protected $validationRules = [
@@ -41,6 +42,7 @@ class StatusvdModel extends Model
         'bentuk_dukungan' => 'required'
     ];
     
+    // memanggil "no. registrasi" ke "status verifikasi dokumen" 
     public function getStatusvdWithRegistrationNumber()
     {
         return $this->select('statusvd.*, statusvm.nomor_registrasi')
@@ -49,6 +51,7 @@ class StatusvdModel extends Model
                     ->getResultArray();
     }
 
+    // memanggil mitra yg terverifikasi di "status verifikasi dokumen" ke "status rekomendasi"
     public function getVerifiedWithRegistrationNumber()
     {
         return $this->select('statusvd.*, statusvm.nomor_registrasi')
@@ -61,11 +64,16 @@ class StatusvdModel extends Model
                     })
                     ->get()
                     ->getResultArray();
+                    
     }
-
-
-    public function getById($id)
+               
+    // memanggil/join tabel statusvm dan statusvd ke upload dokumen
+    public function getMitraDetailById($id)
     {
-        return $this->where('id', $id)->first();
+        return $this->select('statusvd.*, statusvm.nomor_registrasi, statusvm.alamat, statusvm.email, statusvm.notel')
+                    ->join('statusvm', 'statusvd.nama_mitra = statusvm.nama_mitra AND statusvd.jenis_mitra = statusvm.jenis_mitra', 'left')
+                    ->where('statusvd.id', $id)
+                    ->first();
     }
+
 }
