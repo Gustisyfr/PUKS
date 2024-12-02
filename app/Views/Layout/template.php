@@ -12,6 +12,7 @@
   </head>
   <body>
     <?= $this->include('layout/navbar') ?>
+    <?= $this->include('layout/sidebar') ?>
     
     <?php if (session()->getFlashdata('message')): ?>
       <div class="alert alert-success alert-dismissible fade show" role="alert">

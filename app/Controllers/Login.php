@@ -8,4 +8,14 @@ class Login extends BaseController
     {
         return view ('auth/login');
     }
+    
+    public function register()
+    {
+        return view ('auth/register');
+    }
+    
+    public function forgots()
+    {
+        return view ('auth/forgot');
+    }
 }
