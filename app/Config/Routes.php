@@ -8,8 +8,8 @@ use CodeIgniter\Router\RouteCollection;
 // $routes->get('/', 'Login::index');
 // $routes->get('/auth/register', 'Login::register');
 // $routes->get('/auth/forgot', 'Login::forgot');
-$routes->get('/', 'Home::index');
-$routes->get('/home', 'Home::index');
+$routes->get('/', 'Index::index'); 
+$routes->get('/index', 'Index::index');   
 
 $routes->get('/pages/daftarks', 'Daftarks::index'); 
 $routes->post('/pages/daftarks', 'Daftarks::index');
@@ -27,12 +27,19 @@ $routes->post('/pages/admin/verifikasim/update', 'Admin\Verifikasim::update');
 
 $routes->get('/pages/admin/statusr', 'Admin\Statusr::index');
 $routes->post('/pages/admin/statusr', 'Admin\Statusr::index');
-$routes->delete('/admin/statusr/(:num)', 'Admin\Statusr::edit/$1');
+$routes->get('/admin/statusr/(:num)', 'Admin\Statusr::edit/$1');
 $routes->delete('/admin/statusr/(:num)', 'Admin\Statusr::delete/$1');
 
 $routes->get('/pages/admin/uploadmemo/(:num)', 'Admin\Uploadmemo::edit/$1');
 $routes->post('/pages/admin/uploadmemo/update', 'Admin\Uploadmemo::update');
 
+$routes->get('/pages/admin/kegiatan', 'Admin\Kegiatan::index'); 
+$routes->post('/pages/admin/kegiatan/save', 'Admin\Kegiatan::save'); 
+
+$routes->get('/pages/admin/kegiatan_edit', 'Admin\Kegiatan_edit::index'); 
+$routes->post('/pages/admin/kegiatan_edit', 'Admin\Kegiatan_edit::index'); 
+$routes->get('/pages/admin/kegiatan_edit/(:num)', 'Admin\Kegiatan_edit::edit/$1'); 
+$routes->delete('/pages/admin/kegiatan_edit/(:num)', 'Admin\Kegiatan_edit::delete/$1'); 
 
 // routes SES
 $routes->get('/pages/ses/uploaddok', 'Ses\Uploaddok::index');

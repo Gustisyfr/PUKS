@@ -167,7 +167,7 @@
                 <div class="row mb-3">
                     <label for="InputMemo" class="col-sm-3 col-form-label">Upload Memo</label>
                     <div class="col-sm-5">
-                        <input type="file" class="form-control" name="file_memo" id="InputMemo" aria-label="file example" required>
+                        <input type="file" class="form-control" name="file_memo" id="InputMemo"required>
                         <div class="invalid-feedback">Format file harus .PDF</div>
                     </div>
                 </div>
