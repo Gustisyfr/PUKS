@@ -76,4 +76,36 @@ class Statusr extends BaseController
         $this->statusrModel->delete($id);
         return redirect()->to('/pages/admin/statusr')->with('message', 'Data berhasil dihapus');
     }
+
+    public function getChartData()
+{
+    $jenisMitra = $this->statusrModel->select('jenis_mitra, COUNT(*) as count')
+        ->groupBy('jenis_mitra')
+        ->get()
+        ->getResultArray();
+
+    $bentukKerjasama = $this->statusrModel->select('bentuk_kerjasama, COUNT(*) as count')
+        ->groupBy('bentuk_kerjasama')
+        ->get()
+        ->getResultArray();
+
+    // Format data untuk chart
+    $jenisMitraData = [];
+    foreach ($jenisMitra as $item) {
+        $jenisMitraData[$item['jenis_mitra']] = $item['count'];
+    }
+
+    $bentukKerjasamaData = [];
+    foreach ($bentukKerjasama as $item) {
+        $bentukKerjasamaData[$item['bentuk_kerjasama']] = $item['count'];
+    }
+
+    return $this->response->setJSON([
+        'success' => true,
+        'jenis_mitra' => $jenisMitraData,
+        'bentuk_kerjasama' => $bentukKerjasamaData
+    ]);
+}
+
+
 }

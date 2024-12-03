@@ -29,6 +29,9 @@ $routes->get('/pages/admin/statusr', 'Admin\Statusr::index');
 $routes->post('/pages/admin/statusr', 'Admin\Statusr::index');
 $routes->get('/admin/statusr/(:num)', 'Admin\Statusr::edit/$1');
 $routes->delete('/admin/statusr/(:num)', 'Admin\Statusr::delete/$1');
+// $routes->get('/admin/statusr/chart-data', 'Admin\Statusr::getChartData');
+$routes->get('/admin/statusr/getChartData', 'Admin\Statusr::getChartData');
+
 
 $routes->get('/pages/admin/uploadmemo/(:num)', 'Admin\Uploadmemo::edit/$1');
 $routes->post('/pages/admin/uploadmemo/update', 'Admin\Uploadmemo::update');
@@ -37,9 +40,8 @@ $routes->get('/pages/admin/kegiatan', 'Admin\Kegiatan::index');
 $routes->post('/pages/admin/kegiatan/save', 'Admin\Kegiatan::save'); 
 
 $routes->get('/pages/admin/kegiatan_edit', 'Admin\Kegiatan_edit::index'); 
-$routes->post('/pages/admin/kegiatan_edit', 'Admin\Kegiatan_edit::index'); 
-$routes->get('/pages/admin/kegiatan_edit/(:num)', 'Admin\Kegiatan_edit::edit/$1'); 
-$routes->delete('/pages/admin/kegiatan_edit/(:num)', 'Admin\Kegiatan_edit::delete/$1'); 
+$routes->post('/pages/admin/kegiatan_edit', 'Admin\Kegiatan_edit::index');  
+$routes->delete('/admin/kegiatan_edit/(:num)', 'Admin\Kegiatan_edit::delete/$1'); 
 
 // routes SES
 $routes->get('/pages/ses/uploaddok', 'Ses\Uploaddok::index');

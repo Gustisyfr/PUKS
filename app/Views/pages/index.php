@@ -2,6 +2,7 @@
 
 
 <?= $this->section('content') ?>
+<!-- carousel -->
 <div class="container">
     <div class="row">
         <div class="col">
@@ -34,6 +35,128 @@
         </div>
     </div>
 </div>
+
+<!-- blue economy -->
+<div class="container-custom">
+    <h1 class="text-center align-middle mb-3" style="color: aliceblue; padding-top: 60px;">5 Kebijakan Ekonomi Biru</h1>
+    <div class="card-container-custom">
+      <div class="card-custom">
+        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/1.png" alt="Icon 1" class="card-img-custom">
+        <div class="card-body-custom">
+          <h5 class="card-title-custom">Memperluas Kawasan Konservasi Laut</h5>
+        </div>
+      </div>
+      <div class="card-custom">
+        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/2.png" alt="Icon 2" class="card-img-custom">
+        <div class="card-body-custom">
+          <h5 class="card-title-custom">Penangkapan Ikan Terukur Berbasis Kuota</h5>
+        </div>
+      </div>
+      <div class="card-custom">
+        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/3.png" alt="Icon 3" class="card-img-custom">
+        <div class="card-body-custom">
+          <h5 class="card-title-custom">Pengembangan Budidaya Laut, Pesisir, dan Darat Secara Berkelanjutan</h5>
+        </div>
+      </div>
+      <div class="card-custom">
+        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/4.png" alt="Icon 4" class="card-img-custom">
+        <div class="card-body-custom">
+          <h5 class="card-title-custom">Pengawasan dan Pengendalian Pesisir dan Pulau-Pulau Kecil</h5>
+        </div>
+      </div>
+      <div class="card-custom">
+        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/5.png" alt="Icon 5" class="card-img-custom">
+        <div class="card-body-custom">
+          <h5 class="card-title-custom">Pengelolaan Sampah Plastik di Laut</h5>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- chart -->
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" style="background-color: rgb(0, 42, 82);">
+                    <h3 class="text-center" style="color: aliceblue;">Jenis Mitra</h3>
+                </div>
+                <div class="card-body">
+                    <canvas id="jenisMitraChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" style="background-color: rgb(0, 42, 82);">
+                    <h3 class="text-center" style="color: aliceblue;">Bentuk Kerjasama</h3>
+                </div>
+                <div class="card-body">
+                    <canvas id="bentukKerjasamaChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function() {
+        // Ambil data dari server
+        $.ajax({
+            url: "<?= base_url('/admin/statusr/chart-data') ?>",
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                // Data untuk Pie Chart (Jenis Mitra)
+                const jenisMitraLabels = data.jenis_mitra.map(item => item.jenis_mitra);
+                const jenisMitraCounts = data.jenis_mitra.map(item => item.count);
+
+                const pieCtx = document.getElementById('jenisMitraChart').getContext('2d');
+                new Chart(pieCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: jenisMitraLabels,
+                        datasets: [{
+                            label: 'Jenis Mitra',
+                            data: jenisMitraCounts,
+                            backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff']
+                        }]
+                    }
+                });
+
+                // Data untuk Bar Chart (Bentuk Kerjasama)
+                const bentukLabels = data.bentuk_kerjasama.map(item => item.bentuk_kerjasama);
+                const bentukCounts = data.bentuk_kerjasama.map(item => item.count);
+
+                const barCtx = document.getElementById('bentukKerjasamaChart').getContext('2d');
+                new Chart(barCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: bentukLabels,
+                        datasets: [{
+                            label: 'Bentuk Kerjasama',
+                            data: bentukCounts,
+                            backgroundColor: '#4caf50',
+                            borderColor: '#2e7d32',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+
 <?= $this->endSection() ?>
 
 

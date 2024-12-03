@@ -1,23 +1,19 @@
-/* Pastikan body dan html punya tinggi minimal 100% */
 html,
 body {
   height: 100%;
   margin: 0;
 }
 
-/* Wrapper untuk keseluruhan konten */
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Tinggi minimal agar mencakup seluruh viewport */
+  min-height: 100vh;
 }
 
-/* Bagian konten utama yang bisa tumbuh */
 .content {
-  flex: 1; /* Mengisi ruang yang tersisa */
+  flex: 1;
 }
 
-/* Styling footer */
 footer {
   padding: 1px;
 }
@@ -51,4 +47,63 @@ footer {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.6);
+}
+
+.container-custom {
+  border-radius: 30px;
+  padding: 20px;
+  margin-bottom: 3rem;
+  height: 75vh;
+  background-color: rgb(0, 42, 82);
+  flex-wrap: wrap;
+}
+
+.card-container-custom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 7%;
+}
+
+.card-custom {
+  background-color: skyblue;
+  flex: 1 1 calc(20% - 20px);
+  max-width: 500px;
+  max-height: 300px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+.card-img-custom {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: -50px auto 10px;
+  background-color: white;
+  padding: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body-custom {
+  padding: 15px 0;
+}
+
+.card-title-custom {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .card-custom {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .card-custom {
+    flex: 1 1 100%;
+  }
 }
