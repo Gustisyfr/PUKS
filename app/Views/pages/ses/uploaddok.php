@@ -70,7 +70,7 @@
                         <option value="Direktorat Perizinan dan Kenelayanan">Direktorat Perizinan dan Kenelayanan</option>
                         <!-- UPT -->
                         <option value="Balai Besar Penangkapan Ikan">Balai Besar Penangkapan Ikan</option>
-                        <option value="Pelabuhan Perikanan Samudera(PPS) Nizam Zachman, Jakarta">Pelabuhan Perikanan Samudera(PPS) Nizam Zachman, Jakarta</option>
+                        <option value="Pelabuhan Perikanan Samudera(PPS) Nizam Zachman, Jakarta">Pelabuhan Perikanan Samudera(PPS) Nizam Zachman Jakarta</option>
                         <option value="PPS Kendari">PPS Kendari</option>
                         <option value="PPS Belawan">PPS Belawan</option>
                         <option value="PPS Bungus">PPS Bungus</option>
@@ -112,8 +112,8 @@
                         <option value="Balai Perikanan Budidaya Air Payau">Balai Perikanan Budidaya Air Payau</option>
                         <option value="Balai Perikanan Budidaya Laut">Balai Perikanan Budidaya Laut</option>
                         <option value="Balai Produksi Induk Udang Unggul dan Kekerangan Karangasem Bali">Balai Produksi Induk Udang Unggul dan Kekerangan Karangasem Bali</option>
-                        <option value="Balai Layanan Usaha Produksi Perikanan Budidaya Karawang, Jawa Barat">Balai Layanan Usaha Produksi Perikanan Budidaya Karawang, Jawa Barat</option>
-                        <option value="Balai Pengujian Kesehatan Ikan dan Lingkungan Serang, Banten">Balai Pengujian Kesehatan Ikan dan Lingkungan Serang, Banten</option>
+                        <option value="Balai Layanan Usaha Produksi Perikanan Budidaya Karawang, Jawa Barat">Balai Layanan Usaha Produksi Perikanan Budidaya Karawang Jawa Barat</option>
+                        <option value="Balai Pengujian Kesehatan Ikan dan Lingkungan Serang, Banten">Balai Pengujian Kesehatan Ikan dan Lingkungan Serang Banten</option>
                     </select>
                 </div>
                 <div class="form-group mb-3 hidden-dropdown" id="djpdspkpDropdown" style="display: none;">
@@ -127,7 +127,7 @@
                         <option value="Direktorat Pengolahan">Direktorat Pengolahan</option>
                         <option value="Direktorat Pemasaran">Direktorat Pemasaran</option>
                         <!-- UPT -->
-                        <option value="Balai Besar Pengujian Penarapan Produk Kelautan dan Perikanan, Cilangkap">Balai Besar Pengujian Penarapan Produk Kelautan dan Perikanan, Cilangkap</option>
+                        <option value="Balai Besar Pengujian Penarapan Produk Kelautan dan Perikanan, Cilangkap">Balai Besar Pengujian Penarapan Produk Kelautan dan Perikanan Cilangkap</option>
                     </select>
                 </div>
                 <div class="form-group mb-3 hidden-dropdown" id="djpsdkpDropdown" style="display: none;">
@@ -180,20 +180,20 @@
                         <option value="Pusat Pendidikan Kelautan dan Perikanan">Pusat Pendidikan Kelautan dan Perikanan</option>   
                         <option value="Pusat pelatihan Kelautan dan Perikanan">Pusat pelatihan Kelautan dan Perikanan</option>   
                         <!-- UPT -->
-                        <option value="Loka Riset Sumberdaya dan Kerentanan Pesisir, Padang">Loka Riset Sumberdaya dan Kerentanan Pesisir, Padang</option>   
-                        <option value="Loka Perekayasaan Teknologi Kelautan, Wakatobi">Loka Perekayasaan Teknologi Kelautan, Wakatobi</option>   
+                        <option value="Loka Riset Sumberdaya dan Kerentanan Pesisir, Padang">Loka Riset Sumberdaya dan Kerentanan Pesisir Padang</option>   
+                        <option value="Loka Perekayasaan Teknologi Kelautan, Wakatobi">Loka Perekayasaan Teknologi Kelautan Wakatobi</option>   
                         <option value="Pusat Riset Perikanan">Pusat Riset Perikanan</option>   
-                        <option value="Balai Riset Perikanan, Jakarta">Balai Riset Perikanan, Jakarta</option>   
-                        <option value="Balai Riset Perikanan Perairann umum dan Penyuluhan Perikanan, Palembang">Balai Riset Perikanan Perairann umum dan Penyuluhan Perikanan, Palembang</option>   
-                        <option value="Balai Riset Pemulihan Sumber Daya Ikan, Jatiluhur Purwakarta">Balai Riset Pemulihan Sumber Daya Ikan, Jatiluhur Purwakarta</option>   
-                        <option value="Balai Riset Perikanan Budidaya Air Payau dan Penyuluhan Perikanan, Maros">Balai Riset Perikanan Budidaya Air Payau dan Penyuluhan Perikanan, Maros</option>   
-                        <option value="Balai Riset Perikanan Budidaya Air Tawar dan Penyuluhan Perikanan, Bogor">Balai Riset Perikanan Budidaya Air Tawar dan Penyuluhan Perikanan, Bogor</option>   
-                        <option value="Balai Riset Pemuliaan Ikan, Sukamandi">Balai Riset Pemuliaan Ikan, Sukamandi</option>   
-                        <option value="Balai Riset Budidaya Ikan Hias, Depok">Balai Riset Budidaya Ikan Hias, Depok</option>   
-                        <option value="Balai Besar Riset Budidaya Laut dan Penyuluhan Perikanan, Gondol Buleleng Singaraja">Balai Besar Riset Budidaya Laut dan Penyuluhan Perikanan, Gondol Buleleng Singaraja</option>   
-                        <option value="Loka Riset Perikanan Tuna, Benoa">Loka Riset Perikanan Tuna, Benoa</option>   
+                        <option value="Balai Riset Perikanan, Jakarta">Balai Riset Perikanan Jakarta</option>   
+                        <option value="Balai Riset Perikanan Perairann umum dan Penyuluhan Perikanan, Palembang">Balai Riset Perikanan Perairann umum dan Penyuluhan Perikanan Palembang</option>   
+                        <option value="Balai Riset Pemulihan Sumber Daya Ikan, Jatiluhur Purwakarta">Balai Riset Pemulihan Sumber Daya Ikan Jatiluhur Purwakarta</option>   
+                        <option value="Balai Riset Perikanan Budidaya Air Payau dan Penyuluhan Perikanan, Maros">Balai Riset Perikanan Budidaya Air Payau dan Penyuluhan Perikanan Maros</option>   
+                        <option value="Balai Riset Perikanan Budidaya Air Tawar dan Penyuluhan Perikanan, Bogor">Balai Riset Perikanan Budidaya Air Tawar dan Penyuluhan Perikanan Bogor</option>   
+                        <option value="Balai Riset Pemuliaan Ikan, Sukamandi">Balai Riset Pemuliaan Ikan Sukamandi</option>   
+                        <option value="Balai Riset Budidaya Ikan Hias, Depok">Balai Riset Budidaya Ikan Hias Depok</option>   
+                        <option value="Balai Besar Riset Budidaya Laut dan Penyuluhan Perikanan, Gondol Buleleng Singaraja">Balai Besar Riset Budidaya Laut dan Penyuluhan Perikanan Gondol Buleleng Singaraja</option>   
+                        <option value="Loka Riset Perikanan Tuna, Benoa">Loka Riset Perikanan Tuna Benoa</option>   
                         <option value="Loka Riset Mekanisasi Pengolahan Hasil Perikanan">Loka Riset Mekanisasi Pengolahan Hasil Perikanan</option>   
-                        <option value="Loka Riset Budidaya Rumput Laut, Boalemo Gorontalo">Loka Riset Budidaya Rumput Laut, Boalemo Gorontalo</option>   
+                        <option value="Loka Riset Budidaya Rumput Laut, Boalemo Gorontalo">Loka Riset Budidaya Rumput Laut Boalemo Gorontalo</option>   
                         <option value="Balai Besar Riset Sosial Ekonomi Kelautan dan Perikanan">Balai Besar Riset Sosial Ekonomi Kelautan dan Perikanan</option>   
                         <option value="Balai Besar Riset Pengolahan Produk dan Bioteknologi Kelautan dan Perikanan">Balai Besar Riset Pengolahan Produk dan Bioteknologi Kelautan dan Perikanan</option>   
                         <option value="Pusat Pendidikan Kelautan dan Perikanan">Pusat Pendidikan Kelautan dan Perikanan</option>   
@@ -212,7 +212,7 @@
                         <option value="SUPM Kota Agung">SUPM Kota Agung</option>   
                         <option value="SUPM Tegal">SUPM Tegal</option>   
                         <option value="SUPM Waiheru Ambon">SUPM Waiheru Ambon</option>   
-                        <option value="Balai Pendidikan dan Pelatihan Aparatur, Sukamandi">Balai Pendidikan dan Pelatihan Aparatur, Sukamandi</option>   
+                        <option value="Balai Pendidikan dan Pelatihan Aparatur, Sukamandi">Balai Pendidikan dan Pelatihan Aparatur Sukamandi</option>   
                         <option value="BPPP Medan">BPPP Medan</option>   
                         <option value="BPPP Tegal">BPPP Tegal</option>   
                         <option value="BPPP Banyuwangi">BPPP Banyuwangi</option>   
@@ -233,7 +233,7 @@
                         <option value="Pusat Pengendalian dan Pengawasan Mutu Produksi Primer">Pusat Pengendalian dan Pengawasan Mutu Produksi Primer</option>   
                         <option value="Pusat Pengendalian dan Pengawasan Mutu Pasca Panen">Pusat Pengendalian dan Pengawasan Mutu Pasca Panen</option>   
                         <!-- UPT -->
-                        <option value="Balai Besar KIPM Jakarta I">Loka Riset Sumberdaya dan Kerentanan Pesisir, Padang</option>      
+                        <option value="Balai Besar KIPM Jakarta I">Loka Riset Sumberdaya dan Kerentanan Pesisir Padang</option>      
                         <option value="Balai Besar KIPM Makasar">Balai Besar KIPM Makasar</option>      
                         <option value="Balai Besar KIPM Denpasar">Balai Besar KIPM Denpasar</option>      
                         <option value="Balai Besar KIPM Surabaya I">Balai Besar KIPM Surabaya I</option>      
