@@ -53,7 +53,7 @@ class Statusvd extends BaseController
     public function delete($id)
     {
         $this->statusvdModel->delete($id);
-        return redirect()->to('/pages/ses/statusvd');
+        return redirect()->to('/pages/ses/statusvd')->with('message', 'Data berhasil dihapus');
     }
 
 }

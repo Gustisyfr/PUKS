@@ -23,12 +23,11 @@ class Statusr extends BaseController
     {
         $statusr = $this->statusrModel->findAll();
 
-        $data=[
+        $data = [
             'title' => 'Status Rekomendasi',
             'statusr' => $statusr
         ];
-        return view ('pages/admin/statusr', $data);
-
+        return view('pages/admin/statusr', $data);
     }
 
     public function edit($id)
@@ -45,6 +44,11 @@ class Statusr extends BaseController
         // memanggil data mitra dari statusvm berdasarkan 'nomor registrasi'
         $mitraStatusvm = $this->statusvmModel
             ->where('nomor_registrasi', $nomorRegistrasi)
+            ->first();
+
+        // memanggil data mitra dari statusvd berdasarkan 'nama mitra'
+        $mitraStatusvd = $this->statusvdModel
+            ->where('nama_mitra', $statusr['nama_mitra'])
             ->first();
 
         // merge data yang diperlukan
@@ -64,14 +68,12 @@ class Statusr extends BaseController
             ]
         ];
 
-        return view('pages/admin/status', $data);
+        return view('pages/admin/statusr', $data);
     }
-
 
     public function delete($id)
     {
         $this->statusrModel->delete($id);
-        return redirect()->to('/pages/admin/statusr');
+        return redirect()->to('/pages/admin/statusr')->with('message', 'Data berhasil dihapus');
     }
-
 }

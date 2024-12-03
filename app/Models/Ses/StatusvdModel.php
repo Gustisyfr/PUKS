@@ -30,8 +30,7 @@ class StatusvdModel extends Model
         'profil_mitra',
         'draft_kerjasama',
         'sk_kumham',
-        'surat_komitmen',
-        'id_statusvd' 
+        'surat_komitmen'
     ];
 
     protected $validationRules = [

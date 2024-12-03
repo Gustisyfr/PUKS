@@ -159,8 +159,8 @@
 
             <!-- input catatan -->
             <div class="mb-3">
-                <label for="catatanFormControlTextarea1" class="form-label">Catatan :</label>
-                <textarea class="form-control" id="CatatanTextarea1" rows="3"></textarea>
+                <label for="catatan" class="form-label">Catatan :</label>
+                <textarea type="text" class="form-control" id="catatan" name="catatan" placeholder="Masukan catatan bila ada" rows="3"></textarea>
             </div>
             <!-- upload memo -->
             <div class="form-horizontal">

@@ -31,6 +31,7 @@ class StatusrModel extends Model
                     'jenis_mitra' => $item['jenis_mitra'],
                     'bentuk_kerjasama' => $item['bentuk_kerjasama'],
                     'bentuk_dukungan' => $item['bentuk_dukungan'],
+                    'catatan' => '',
                     'status_rekomendasi' => ''
                 ]);
             }

@@ -335,7 +335,7 @@
                 <!-- uraian -->
                 <div class="form-group mb-3">
                     <label for="uraian" class="form-label">Uraian</label>
-                    <textarea type="text" class="form-control" id="uraian" name="uraian" placeholder="Masukan Uraian" rows="3"></textarea>
+                    <textarea type="text" class="form-control" id="uraian" name="uraian" placeholder="Masukan uraian bila perlu" rows="3"></textarea>
                 </div>
                 <!-- hidden input file -->
                 <div class="form-horizontal" id="suratPermohonanInput" style="display: none;">
