@@ -19,7 +19,7 @@ class Kegiatan_edit extends BaseController
         $kegiatan = $this->kegiatanModel->findAll();
         
         $data = [
-            'title' => 'Daftar Dokumentasi Kegiatan', 
+            'title' => 'Edit Dokumentasi Kegiatan', 
             'kegiatan' => $kegiatan
         ];
     

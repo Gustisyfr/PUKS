@@ -15,6 +15,7 @@
                 <th scope="col">Bentuk Kerja Sama</th>
                 <th scope="col">Dukungan Program</th>
                 <th scope="col">Catatan</th>
+                <th scope="col">Memo</th>
                 <th scope="col">Status</th>
                 <th scope="col">Aksi</th>
                 </tr>
@@ -34,7 +35,8 @@
                 <td><?= $r['jenis_mitra']; ?></td>
                 <td><?= $r['bentuk_kerjasama']; ?></td>
                 <td><?= $r['bentuk_dukungan']; ?></td>
-                <td><?= $r['catatan']; ?><?= !empty($r['catatan']) ? $r['catatan'] : 'Tidak ada catatan'; ?></td>
+                <td><?=$r['catatan']; ?><?= !empty($r['catatan']) ? $r['catatan'] : 'Tidak ada catatan'; ?></td>
+                <td><a href="<?= base_url('uploads/' . $r['file_memo']); ?>" target="_blank" class="form-control bg-light"><?= $r['file_memo']; ?></a></td>
                 <td>
                     <?php if($r['status_rekomendasi'] == 'Direkomendasikan'): ?>
                         <button type="button" class="btn btn-success me-auto btn-custom">Direkomendasikan</button>
@@ -73,7 +75,7 @@
             </table>
             
             <div>
-                <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/') ?>';">Kembali</button>
+                <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/home') ?>';">Kembali</button>
             </div>
         </div>
     </div>

@@ -35,7 +35,7 @@
             </form>
             
             <div>
-                <button type="button" class="btn btn-success mb-3" onclick="window.location.href='<?= base_url('/pages/admin/statusvm') ?>';">Selesai</button>
+                <button type="button" class="btn btn-success mb-3" onclick="window.location.href='<?= base_url('/home') ?>';">Selesai</button>
             </div>
         </div>
     </div>

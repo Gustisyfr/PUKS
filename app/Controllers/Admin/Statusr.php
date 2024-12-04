@@ -89,7 +89,7 @@ class Statusr extends BaseController
         ->get()
         ->getResultArray();
 
-    // Format data untuk chart
+    // format data untuk chart
     $jenisMitraData = [];
     foreach ($jenisMitra as $item) {
         $jenisMitraData[$item['jenis_mitra']] = $item['count'];

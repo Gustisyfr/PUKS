@@ -49,7 +49,7 @@ class Kegiatan extends BaseController
                 'gambar' => $newName,
             ]);
 
-            return redirect()->to(base_url('home'))->with('success', 'Dokumentasi kegiatan berhasil disimpan.');
+            return redirect()->to(base_url('/home'))->with('success', 'Dokumentasi kegiatan berhasil disimpan.');
         }
 
         return redirect()->back()->with('error', 'Gagal mengupload gambar. Pastikan file yang diupload adalah gambar.');
