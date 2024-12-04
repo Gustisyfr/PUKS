@@ -5,11 +5,12 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-// $routes->get('/', 'Login::index');
-// $routes->get('/auth/register', 'Login::register');
+$routes->get('/', 'Login::index');
+$routes->get('/auth/login', 'Login::index');
+$routes->get('/auth/register', 'Login::register');
 // $routes->get('/auth/forgot', 'Login::forgot');
-$routes->get('/', 'Index::index'); 
-$routes->get('/index', 'Index::index');   
+$routes->post('/', 'Home::index'); 
+$routes->get('/home', 'Home::index');   
 
 $routes->get('/pages/daftarks', 'Daftarks::index'); 
 $routes->post('/pages/daftarks', 'Daftarks::index');
@@ -29,7 +30,7 @@ $routes->get('/pages/admin/statusr', 'Admin\Statusr::index');
 $routes->post('/pages/admin/statusr', 'Admin\Statusr::index');
 $routes->get('/admin/statusr/(:num)', 'Admin\Statusr::edit/$1');
 $routes->delete('/admin/statusr/(:num)', 'Admin\Statusr::delete/$1');
-// $routes->get('/admin/statusr/chart-data', 'Admin\Statusr::getChartData');
+$routes->get('/admin/statusr/chart-data', 'Admin\Statusr::getChartData');
 $routes->get('/admin/statusr/getChartData', 'Admin\Statusr::getChartData');
 
 

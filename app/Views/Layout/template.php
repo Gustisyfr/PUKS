@@ -127,9 +127,11 @@
                     },
                     scales: {
                         y: {
+                            min: 0,
+                            max: 100,
                             beginAtZero: true
                         }
-                    }
+                    }                    
                 }
             });
         }

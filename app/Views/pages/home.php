@@ -3,10 +3,10 @@
 
 <?= $this->section('content') ?>
 <!-- carousel -->
-<div class="container">
+
     <div class="row">
         <div class="col">
-            <div id="carouselExampleCaptions" class="carousel slide my-5">
+            <div id="carouselExampleCaptions" class="carousel slide carousel-slide-custom">
                 <div class="carousel-indicators">
                     <?php foreach ($kegiatan as $index => $k) : ?>
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?= $index ?>" class="<?= $index === 0 ? 'active' : '' ?>" aria-current="true" aria-label="Slide <?= $index + 1 ?>"></button>
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
 <!-- blue economy -->
 <div class="container-custom">
@@ -92,7 +92,7 @@
                 <div class="card-header" style="background-color: rgb(0, 42, 82);">
                     <h3 class="text-center" style="color: aliceblue;">Bentuk Kerjasama</h3>
                 </div>
-                <div class="card-body">
+                <div class="card-body-chart">
                     <canvas id="bentukKerjasamaChart"></canvas>
                 </div>
             </div>
@@ -109,7 +109,7 @@
             type: "GET",
             dataType: "json",
             success: function(data) {
-                // Data untuk Pie Chart (Jenis Mitra)
+                // data untuk Pie Chart (jenis mitra)
                 const jenisMitraLabels = data.jenis_mitra.map(item => item.jenis_mitra);
                 const jenisMitraCounts = data.jenis_mitra.map(item => item.count);
 
@@ -126,7 +126,7 @@
                     }
                 });
 
-                // Data untuk Bar Chart (Bentuk Kerjasama)
+                // data untuk bar chart (bentuk kerjasama)
                 const bentukLabels = data.bentuk_kerjasama.map(item => item.bentuk_kerjasama);
                 const bentukCounts = data.bentuk_kerjasama.map(item => item.count);
 

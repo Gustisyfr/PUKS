@@ -30,14 +30,13 @@ class Filters extends BaseFilters
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'login'         => \Myth\Auth\Filters\LoginFilter::class,
+        'role'          => \Myth\Auth\Filters\RoleFilter::class,
+        'permission'    => \Myth\Auth\Filters\PermissionFilter::class,
         'cors'          => Cors::class,
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
-        'performance'   => PerformanceMetrics::class,
-        // 'login'         => \Myth\Auth\Filters\LoginFilter::class,
-        // 'role'          => \Myth\Auth\Filters\RoleFilter::class,
-        // 'permission'    => \Myth\Auth\Filters\PermissionFilter::class,
-        // 'methodOverride' => \App\Filters\MethodOverride::class,
+        'performance'   => PerformanceMetrics::class
     ];
     
 
@@ -74,11 +73,11 @@ class Filters extends BaseFilters
      */
     public array $globals = [
         'before' => [
-            'csrf',
+            'login',
+            'csrf'
             // 'methodOverride',
             // 'honeypot',
             // 'invalidchars',
-            // 'login'
         ],
         'after' => [
             // 'toolbar',

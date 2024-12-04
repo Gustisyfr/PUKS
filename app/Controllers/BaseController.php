@@ -57,4 +57,10 @@ abstract class BaseController extends Controller
         // $this->nama = 'Gusti';
         session();
     }
+
+    public function __construct()
+    {
+        helper(['auth']); // Helper Myth\Auth
+    }
+
 }

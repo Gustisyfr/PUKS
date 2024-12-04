@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Admin\KegiatanModel;
 
-class Index extends BaseController
+class Home extends BaseController
 {
     protected $kegiatanmodel;
 
@@ -19,6 +19,6 @@ class Index extends BaseController
             'title' => 'Home | Pengajuan Usulan Kerja Sama',
             'kegiatan' => $this->kegiatanmodel->findAll() 
         ];
-        return view('pages/index', $data);
+        return view('pages/home', $data);
     }
 }

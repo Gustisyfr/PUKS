@@ -2,20 +2,60 @@
 
 namespace App\Controllers;
 
-// class Login extends BaseController
-// {
-//     public function index()
-//     {
-//         return view ('auth/login');
-//     }
-    
-//     public function register()
-//     {
-//         return view ('auth/register');
-//     }
-    
-//     public function forgots()
-//     {
-//         return view ('auth/forgot');
-//     }
-// }
+use Myth\Auth\Config\Auth as AuthConfig;
+use Myth\Auth\Authentication\Authentication;
+
+class Login extends BaseController
+{
+    public function index()
+    {
+        // Cek session
+        if (session()->get('isLoggedIn')) {
+            dd(session()->get('isLoggedIn')); // Cek nilai session 'isLoggedIn'
+            return redirect()->to('/home'); // Redirect ke halaman 'home'
+        }
+
+        $data = [
+            'config' => config(AuthConfig::class),
+        ];
+
+        return view('auth/login', $data);
+    }
+
+    public function processLogin() 
+    {
+        $rules = [
+            'email' => 'required|valid_email',
+            'password' => 'required',
+        ];
+
+        if (!$this->validate($rules)) {
+            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        }
+
+        $email = $this->request->getPost('email');
+        $password = $this->request->getPost('password');
+
+        $authentication = service('authentication'); // Instance Authentication
+        $result = $authentication->attempt($email, $password);
+
+        // Cek hasil login
+        dd($result); // Cek nilai $result
+
+        if ($result) {
+            // Login berhasil
+            session()->set('isLoggedIn', true); // Set session 'isLoggedIn'
+            dd(session()->get('isLoggedIn')); // Cek nilai session 'isLoggedIn'
+            return redirect()->to('/home'); // Redirekt ke halaman 'home'
+        } else {
+            // Login gagal
+            return redirect()->back()->withInput()->with('error', 'Invalid email or password.');
+        }
+    }
+
+    public function logout()
+    {
+        session()->remove('isLoggedIn'); 
+        return redirect()->to('/login'); 
+    }
+}

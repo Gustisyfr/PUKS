@@ -39,23 +39,34 @@ footer {
   display: none;
 }
 
+.carousel-slide-custom {
+  margin-left: -4rem;
+  margin-right: -4rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
 .c-item {
-  height: 550px;
+  height: 600px;
 }
 
 .c-img {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.6);
+  border-radius: 30px;
 }
 
 .container-custom {
   border-radius: 30px;
   padding: 20px;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   height: 75vh;
   background-color: rgb(0, 42, 82);
   flex-wrap: wrap;
+  margin-left: -4rem;
+  margin-right: -4rem;
 }
 
 .card-container-custom {
@@ -106,4 +117,10 @@ footer {
   .card-custom {
     flex: 1 1 100%;
   }
+}
+
+.card-body-chart {
+  height: 622px;
+  margin-right: 3rem;
+  padding-top: 25%;
 }
