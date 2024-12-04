@@ -7,12 +7,15 @@
     <a imgsrc="../public/favicon.ico"></a>
     <!-- bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     
   </head>
   <body>
     <?= $this->include('layout/navbar') ?>
     <?= $this->include('layout/sidebar') ?>
+    <?= $this->include('layout/sidebar_mitra') ?>
+    <?= $this->include('layout/sidebar_ses') ?>
     
     <?php if (session()->getFlashdata('message')): ?>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -35,9 +38,42 @@
     </main>
 
     <!-- footer -->
-    <footer class="bg-primary">
-      <p class="text-start my-3 mx-3">&copy; KKPRI</p>
-    </footer>
+    <footer class="bg-primary mt-5 py-4">
+    <div class="container text-white">
+        <div class="row justify-content-center small-text">
+          <div class="col-md-6">
+            <div class="d-flex align-items-center mb-2">
+             <img src="<?= base_url('../img/logo.svg'); ?>" alt="Logo KKP" style="width: 50px; height: auto; margin-right: 10px;">
+              <h5 class="text-white text-wrap fw-bold fw-bolder small-text"style="max-width: 300px;">Kementerian Kelautan Dan Perikanan | Biro Perencanaan</h5>
+            </div>
+            <div>
+            <p class="text-left small-text">
+            JL. Medan Merdeka Timur No.16 Jakarta Pusat<br>
+            Telp. (021) 3519070 EXT. 7433 – Fax. (021) 3864293<br>
+            Email: humas.kkp@kkp.go.id<br>
+            Call Center KKP: 141<br>
+            </p>
+            </div>
+          </div>
+            <!-- Bagian Ikon Sosial Media -->
+            <div class="col-md-6 mb-3">
+                <p class="text-right small-text fw-bold fw-bolder">Ikuti Kami</p>
+                <div>
+                    <!-- Icon Sosial Media (gunakan font awesome atau ikon lain sesuai keperluan) -->
+                    <a href="https://www.facebook.com/KementerianKelautandanPerikananRI/" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://x.com/kkpgoid" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.instagram.com/birorenkkp/" class="text-white"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Bagian Hak Cipta -->
+            <div class="col-12 mt-3 text-center small-text">
+                <span>&#169; 2024 Kementerian Kelautan Dan Perikanan</span>
+            </div>
+        </div>
+    </div>
+   </footer>
+    
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

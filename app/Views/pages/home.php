@@ -36,6 +36,15 @@
     </div>
 
 
+    <div class="container-progress">
+        <h1 class="text-center align-middle my-5" style="color: aliceblue; padding-top: 60px;">Status Proses Persetujuan</h1>
+        <div class="card-container">
+            <div class="progress progress-custom" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-primary" style="width: 25%">25%</div>
+            </div>
+        </div>
+    </div>
+ 
 <!-- blue economy -->
 <div class="container-custom">
     <h1 class="text-center align-middle mb-3" style="color: aliceblue; padding-top: 60px;">5 Kebijakan Ekonomi Biru</h1>

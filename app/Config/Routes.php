@@ -18,6 +18,10 @@ $routes->post('/daftarks/save', 'Daftarks::save');
 
 $routes->get('/pages/daftarksout', 'Daftarksout::index');
 
+$routes->get('/progress/(:num)', 'Progress::index/$1');
+$routes->get('/progress/(:segment)', 'Progress::index/$1');
+
+
 // routes ADMIN
 $routes->get('/pages/admin/statusvm', 'Admin\Statusvm::index');
 $routes->post('/pages/admin/statusvm/', 'Admin\Statusvm::index');
