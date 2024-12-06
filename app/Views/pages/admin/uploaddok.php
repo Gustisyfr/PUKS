@@ -319,7 +319,7 @@
                 </div>
                 <!-- bentuk dukungan -->
                 <div class="form-group mb-3">
-                    <label for="bentuk_dukungan" class="form-label">Bentuk Dukungan Program KKP</label>
+                    <label for="bentuk_dukungan" class="form-label">Bentuk Dukungan Program KKP I</label>
                     <select class="form-select" id="bentuk_dukungan" name="bentuk_dukungan" aria-label="Default select example" required>
                         <option value="">Pilih Bentuk Dukungan</option>
                         <option>--5 Kebijakan Ekonomi Biru--</option>
@@ -330,6 +330,19 @@
                         <option value="Pengelolaan Sampah Plastik di Laut">Pengelolaan Sampah Plastik di Laut</option>
                         <option>--Lain-lain--</option>
                         <option value="Dukungan Manajemen">Dukungan Manajemen</option>
+                    </select>
+                </div>
+                <!-- bentuk dukungan opsional -->
+                <div class="form-group mb-3">
+                    <label for="bentuk_dukungan_opsional" class="form-label">Bentuk Dukungan Program KKP II (Opsional)</label>
+                    <select class="form-select" id="bentuk_dukungan_opsional" name="bentuk_dukungan_opsional" aria-label="Default select example">
+                        <option value="">Pilih Bentuk Dukungan Opsional (Jika ada)</option>
+                        <option>--5 Kebijakan Ekonomi Biru--</option>
+                        <option value="Perluasan Kawasan Konservasi Laut">Perluasan Kawasan Konservasi Laut</option>
+                        <option value="Penangkapan Ikan Terukur Berbasis Kuota">Penangkapan Ikan Terukur Berbasis Kuota</option>
+                        <option value="Pengembangan Budidaya Laut, Pesisir dan Darat Secara Berkelanjutan">Pengembangan Budidaya Laut, Pesisir dan Darat Secara Berkelanjutan</option>
+                        <option value="Pengawasan dan Pengendalian Pesisir dan Pulau-Pulau Kecil">Pengawasan dan Pengendalian Pesisir dan Pulau-Pulau Kecil</option>
+                        <option value="Pengelolaan Sampah Plastik di Laut">Pengelolaan Sampah Plastik di Laut</option>
                     </select>
                 </div>
                 <!-- uraian -->

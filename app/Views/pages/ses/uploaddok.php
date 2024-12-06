@@ -319,7 +319,7 @@
                 </div>
                 <!-- bentuk dukungan -->
                 <div class="form-group mb-3">
-                    <label for="bentuk_dukungan" class="form-label">Bentuk Dukungan Program KKP</label>
+                    <label for="bentuk_dukungan" class="form-label">Bentuk Dukungan Program KKP I</label>
                     <select class="form-select" id="bentuk_dukungan" name="bentuk_dukungan" aria-label="Default select example" required>
                         <option value="">Pilih Bentuk Dukungan</option>
                         <option>--5 Kebijakan Ekonomi Biru--</option>
@@ -334,7 +334,7 @@
                 </div>
                 <!-- bentuk dukungan opsional -->
                 <div class="form-group mb-3">
-                    <label for="bentuk_dukungan_opsional" class="form-label">Bentuk Dukungan Program KKP (Opsional)</label>
+                    <label for="bentuk_dukungan_opsional" class="form-label">Bentuk Dukungan Program KKP II (Opsional)</label>
                     <select class="form-select" id="bentuk_dukungan_opsional" name="bentuk_dukungan_opsional" aria-label="Default select example">
                         <option value="">Pilih Bentuk Dukungan Opsional (Jika ada)</option>
                         <option>--5 Kebijakan Ekonomi Biru--</option>

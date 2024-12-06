@@ -68,11 +68,11 @@
                     <input class="form-control" type="text" value="<?= $mitra['kerjasama_lain']; ?>" disabled readonly>
                 </div>
                 <div class="mb-3">
-                    <label for="disabledTextInput" class="form-label">Bentuk Dukungan Program KKP</label>
+                    <label for="disabledTextInput" class="form-label">Bentuk Dukungan Program KKP I</label>
                     <input class="form-control" type="text" value="<?= $mitra['bentuk_dukungan']; ?>" disabled readonly>
                 </div>
                 <div class="mb-3">
-                    <label for="disabledTextInput" class="form-label">Bentuk Dukungan Program KKP (Opsional)</label>
+                    <label for="disabledTextInput" class="form-label">Bentuk Dukungan Program KKP II</label>
                     <input class="form-control" type="text" value="<?= !empty($mitra['bentuk_dukungan_opsional']) ? $mitra['bentuk_dukungan_opsional'] : '-'; ?>" disabled readonly>                </div>
                 <div class="mb-3">
                     <label for="disabledTextInput" class="form-label">Uraian</label>
