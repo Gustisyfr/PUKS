@@ -29,7 +29,7 @@ class Verifikasidok extends BaseController
             'mitra' => $statusvd  
         ];
 
-        return view('/pages/ses/verifikasidok', $data);
+        return view('/pages/admin/verifikasidok', $data);
     }
 
     public function update()
@@ -53,7 +53,7 @@ class Verifikasidok extends BaseController
                 }
             }
 
-            return redirect()->to('/pages/ses/statusvd')->with('message', 'Status verifikasi berhasil diupdate.');
+            return redirect()->to('/pages/admin/statusvd')->with('message', 'Status verifikasi berhasil diupdate.');
         }
 
         return redirect()->back()->with('error', 'Tidak ada data untuk diupdate.');

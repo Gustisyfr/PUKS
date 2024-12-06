@@ -10,7 +10,7 @@ class Daftarksout extends BaseController
             'title' => 'Summary Pendaftaran'  
         ];
         
-        return view('/pages/daftarksout', $data); 
+        return view('/pages/mitra/daftarksout', $data); 
     }
 
 }

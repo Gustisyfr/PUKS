@@ -19,7 +19,7 @@ class Daftarks extends BaseController
             'validation' => \Config\Services::validation()
         ];
         
-        return view('/pages/daftarks', $data);  
+        return view('/pages/mitra/daftarks', $data);  
     }
 
     public function save()
@@ -65,7 +65,7 @@ class Daftarks extends BaseController
         ])) {
         
         $validation= \Config\Services::validation();
-        return redirect()->to('/pages/daftarks')->withInput()->with('validation', $validation);
+        return redirect()->to('/pages/mitra/daftarks')->withInput()->with('validation', $validation);
         }
         
         // membuat nomor registrasi
@@ -93,7 +93,7 @@ class Daftarks extends BaseController
             'notel' => $this->request->getVar('notel')
         ];
 
-        return view('/pages/daftarksout', $data);
+        return view('/pages/mitra/daftarksout', $data);
     }
 
 }

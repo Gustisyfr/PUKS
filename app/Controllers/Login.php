@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use Myth\Auth\Config\Auth as AuthConfig;
-use Myth\Auth\Authentication\Authentication;
+// use Myth\Auth\Authentication\Authentication;
 
 class Login extends BaseController
 {
@@ -12,14 +12,15 @@ class Login extends BaseController
         // Cek session
         if (session()->get('isLoggedIn')) {
             dd(session()->get('isLoggedIn')); // Cek nilai session 'isLoggedIn'
-            return redirect()->to('/home'); // Redirect ke halaman 'home'
+            return redirect()->to('/pages/home'); // Redirect ke halaman 'home'
         }
 
         $data = [
             'config' => config(AuthConfig::class),
+            'title' => 'Login | Pengajuan Usulan Kerja Sama'
         ];
 
-        return view('auth/login', $data);
+        return view('/auth/login', $data);
     }
 
     public function processLogin() 
@@ -46,11 +47,31 @@ class Login extends BaseController
             // Login berhasil
             session()->set('isLoggedIn', true); // Set session 'isLoggedIn'
             dd(session()->get('isLoggedIn')); // Cek nilai session 'isLoggedIn'
-            return redirect()->to('/home'); // Redirekt ke halaman 'home'
+            return redirect()->to('/pages/home'); // Redirekt ke halaman 'home'
         } else {
             // Login gagal
             return redirect()->back()->withInput()->with('error', 'Invalid email or password.');
         }
+    }
+
+    public function register()
+    {
+        $data = [
+            'config' => config(AuthConfig::class),
+            'title' => 'Registrasi | Pengajuan Usulan Kerja Sama'
+        ];
+        
+        return view('/auth/register', $data);
+    }
+    
+    public function forgot()
+    {
+        $data = [
+            'config' => config(AuthConfig::class),
+            'title' => 'Lupa Password | Pengajuan Usulan Kerja Sama'
+        ];
+        
+        return view('/auth/forgot', $data);
     }
 
     public function logout()

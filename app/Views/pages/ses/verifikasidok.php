@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col">
             <h2 class="my-4">Verfikasi Dokumen Mitra</h2>
-            <form action="<?= base_url('/pages/ses/verifikasidok/update'); ?>" method="post">
+            <form action="<?= base_url('/ses/verifikasidok/update'); ?>" method="post">
                 <?= csrf_field(); ?>
                 <input type="hidden" name="id_mitra" value="<?= $mitra['id']; ?>">
                 

@@ -34,15 +34,6 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="container-progress">
-        <h1 class="text-center align-middle my-5" style="color: aliceblue; padding-top: 60px;">Status Proses Persetujuan</h1>
-        <div class="card-container">
-            <div class="progress progress-custom" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar bg-primary" style="width: 25%">25%</div>
-            </div>
-        </div>
-    </div> -->
  
 <!-- blue economy -->
 <div class="container-custom">
@@ -82,7 +73,6 @@
 </div>
 
 <!-- chart -->
-
 <div class="container my-5">
     <div class="row">
         <div class="col-md-6">
@@ -113,7 +103,7 @@
     $(document).ready(function() {
         // Ambil data dari server
         $.ajax({
-            url: "<?= base_url('admin/statusr/chart-data') ?>",
+            url: "<?= base_url('/admin/statusr/chart-data') ?>",
             type: "GET",
             dataType: "json",
             success: function(data) {

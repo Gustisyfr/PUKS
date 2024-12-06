@@ -75,7 +75,7 @@
                                 <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
                             </svg>
                         </button>
-                        <form action="/ses/statusvd/<?= $vd['id']; ?>" method="post">
+                        <form action="/admin/statusvd/<?= $vd['id']; ?>" method="post">
                             <?= csrf_field(); ?>
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="submit" class="btn me-auto btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');" >

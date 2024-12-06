@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col">
             <h2 class="my-4">Upload Dokumen</h2>
-            <form action="<?= base_url('/uploaddok/save'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('/ses/uploaddok/save'); ?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <!-- unit organisasi -->
                 <div class="form-group mb-3">
@@ -379,7 +379,7 @@
                 
                 <div>
                     <button type="submit" class="btn btn-success mb-3" >Simpan</button>
-                    <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/home') ?>';">Kembali</button>
+                    <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/pages/ses/home') ?>';">Kembali</button>
                 </div>
             </form>
         </div>

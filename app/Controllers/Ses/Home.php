@@ -19,6 +19,6 @@ class Home extends BaseController
             'title' => 'Home | Pengajuan Usulan Kerja Sama',
             'kegiatan' => $this->kegiatanmodel->findAll() 
         ];
-        return view('/pages/home', $data);
+        return view('/pages/ses/home', $data);
     }
 }

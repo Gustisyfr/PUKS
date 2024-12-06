@@ -16,7 +16,7 @@
 
                     <p><?=lang('Auth.enterEmailForInstructions', [], 'id')?></p>
 
-                    <form action="<?= url_to('forgot') ?>" method="post">
+                    <form action="<?= url_to('auth/forgot') ?>" method="post">
                         <?= csrf_field() ?>
 
                         <div class="form-group">

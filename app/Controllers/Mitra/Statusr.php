@@ -27,7 +27,7 @@ class Statusr extends BaseController
             'title' => 'Status Rekomendasi',
             'statusr' => $statusr
         ];
-        return view('/pages/admin/statusr', $data);
+        return view('/pages/mitra/statusr', $data);
     }
 
     public function edit($id)
@@ -68,43 +68,38 @@ class Statusr extends BaseController
             ]
         ];
 
-        return view('/admin/statusr', $data);
+        return view('/pages/mitra/statusr', $data);
     }
 
-    public function delete($id)
-    {
-        $this->statusrModel->delete($id);
-        return redirect()->to('/admin/statusr')->with('message', 'Data berhasil dihapus');
-    }
+    // public function getChartData()
+    // {
+    //     $jenisMitra = $this->statusrModel->select('jenis_mitra, COUNT(*) as count')
+    //         ->groupBy('jenis_mitra')
+    //         ->get()
+    //         ->getResultArray();
 
-    public function getChartData()
-    {
-        $jenisMitra = $this->statusrModel->select('jenis_mitra, COUNT(*) as count')
-            ->groupBy('jenis_mitra')
-            ->get()
-            ->getResultArray();
+    //     $bentukKerjasama = $this->statusrModel->select('bentuk_kerjasama, COUNT(*) as count')
+    //         ->groupBy('bentuk_kerjasama')
+    //         ->get()
+    //         ->getResultArray();
 
-        $bentukKerjasama = $this->statusrModel->select('bentuk_kerjasama, COUNT(*) as count')
-            ->groupBy('bentuk_kerjasama')
-            ->get()
-            ->getResultArray();
+    //     // format data untuk chart
+    //     $jenisMitraData = [];
+    //     foreach ($jenisMitra as $item) {
+    //         $jenisMitraData[$item['jenis_mitra']] = $item['count'];
+    //     }
 
-        // format data untuk chart
-        $jenisMitraData = [];
-        foreach ($jenisMitra as $item) {
-            $jenisMitraData[$item['jenis_mitra']] = $item['count'];
-        }
+    //     $bentukKerjasamaData = [];
+    //     foreach ($bentukKerjasama as $item) {
+    //         $bentukKerjasamaData[$item['bentuk_kerjasama']] = $item['count'];
+    //     }
 
-        $bentukKerjasamaData = [];
-        foreach ($bentukKerjasama as $item) {
-            $bentukKerjasamaData[$item['bentuk_kerjasama']] = $item['count'];
-        }
+    //     return $this->response->setJSON([
+    //         'success' => true,
+    //         'jenis_mitra' => $jenisMitraData,
+    //         'bentuk_kerjasama' => $bentukKerjasamaData
+    //     ]);
+    // }
 
-        return $this->response->setJSON([
-            'success' => true,
-            'jenis_mitra' => $jenisMitraData,
-            'bentuk_kerjasama' => $bentukKerjasamaData
-        ]);
-    }
 
 }

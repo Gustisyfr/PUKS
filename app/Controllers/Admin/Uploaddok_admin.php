@@ -25,7 +25,7 @@ class Uploaddok extends BaseController
             'title' => 'Upload Dokumen',
             'statusvm' => $statusvm
         ];
-        return view('/pages/ses/uploaddok', $data);
+        return view('/pages/admin/uploaddok', $data);
     }
 
     public function save()
@@ -112,7 +112,7 @@ class Uploaddok extends BaseController
 
         $this->statusvdModel->save($data);
         
-        return redirect()->to('/pages/ses/statusvd')->with('message', 'Data berhasil disimpan');
+        return redirect()->to('/pages/admin/statusvd')->with('message', 'Data berhasil disimpan');
     }
  
 }

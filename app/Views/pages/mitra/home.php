@@ -56,7 +56,7 @@
             <?php endif; ?>
         </p>
     </div>
-</div>
+    </div>
 
 
 <!-- blue economy -->

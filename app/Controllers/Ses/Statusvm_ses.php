@@ -22,13 +22,13 @@ class Statusvm extends BaseController
             'statusvm' => $statusvm
         ];
     
-        return view('/pages/admin/statusvm', $data);  
+        return view('/pages/ses/statusvm', $data);  
     }
     
     public function delete($id)
     {
         $this->statusvmModel->delete($id);
-        return redirect()->to('/admin/statusvm')->with('message', 'Data berhasil dihapus');
+        return redirect()->to('/pages/ses/statusvm')->with('message', 'Data berhasil dihapus');
     }
 
 }

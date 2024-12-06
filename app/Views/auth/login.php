@@ -44,9 +44,10 @@
                                             </div>
                                         </div>
                                     <?php if ($config->allowRemembering): ?>    
-                                        <div class="form-check">
+                                        <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
                                             <label class="form-check-label">
-                                                <input type="checkbox" name="remember" class="form-check-input" <?php if (old('remember')) : ?> checked <?php endif ?>>
+                                            <input type="checkbox" class="custom-control-input" name="remembering" <?php if (old('remember')) : ?> checked <?php endif ?>>
                                                 <?=lang('Auth.rememberMe', [], 'id')?>
                                             </label>
                                         </div>
@@ -58,14 +59,15 @@
                                     
                                     <hr>
 
-                                    <?php if ($config->allowRegistration) : ?>
-                                        <div class="text-center">
-                                        <p><a href="<?= url_to('register') ?>"><?=lang('Auth.needAnAccount', [], 'id')?></a></p>
-                                        </div>
-                                        <?php endif; ?>
                                     <?php if ($config->activeResetter): ?>
                                         <div class="text-center">
-                                        <p><a href="<?= url_to('forgot') ?>"><?=lang('Auth.forgotYourPassword', [], 'id')?></a></p>
+                                        <p><a href="<?= url_to('auth/forgot') ?>"><?=lang('Auth.forgotYourPassword', [], 'id')?></a></p>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <?php if ($config->allowRegistration) : ?>
+                                        <div class="text-center">
+                                        <p><a href="<?= url_to('auth/register') ?>"><?=lang('Auth.needAnAccount', [], 'id')?></a></p>
                                         </div>
                                     <?php endif; ?>
                                 </div>

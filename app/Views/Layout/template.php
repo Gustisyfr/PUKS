@@ -14,8 +14,6 @@
   <body>
     <?= $this->include('layout/navbar') ?>
     <?= $this->include('layout/sidebar') ?>
-    <?= $this->include('layout/sidebar_mitra') ?>
-    <?= $this->include('layout/sidebar_ses') ?>
     
     <?php if (session()->getFlashdata('message')): ?>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -68,7 +66,7 @@
             
             <!-- Bagian Hak Cipta -->
             <div class="col-12 mt-3 text-center small-text">
-                <span>&#169; 2024 Kementerian Kelautan Dan Perikanan</span>
+                <span>&#169; <?= date('Y'); ?> Kementerian Kelautan Dan Perikanan</span>
             </div>
         </div>
     </div>
@@ -84,7 +82,7 @@
     $(document).ready(function () {
         // Fetch data untuk jenis_mitra dan bentuk_kerjasama dari server
         $.ajax({
-            url: '/admin/statusr/getChartData', // URL endpoint untuk mendapatkan data chart
+            url: 'admin/statusr/getChartData', // URL endpoint untuk mendapatkan data chart
             method: 'GET',
             dataType: 'json',
             success: function (response) {

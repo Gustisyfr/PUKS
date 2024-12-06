@@ -27,7 +27,7 @@ class Verifikasim extends BaseController
             'mitra' => $statusvm
         ];
 
-        return view('pages/admin/verifikasim', $data);
+        return view('/pages/admin/verifikasim', $data);
     }
 
     public function update()

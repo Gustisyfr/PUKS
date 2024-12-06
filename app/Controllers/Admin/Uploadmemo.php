@@ -51,7 +51,7 @@ class Uploadmemo extends BaseController
             'mitra' => $mitra
         ];
 
-        return view('pages/admin/uploadmemo', $data);
+        return view('/pages/admin/uploadmemo', $data);
     }
 
         

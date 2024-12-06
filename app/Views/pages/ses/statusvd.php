@@ -94,7 +94,7 @@
             </table>
             
             <div>
-                <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('/home') ?>';">Kembali</button>
+                <button type="button" class="btn btn-danger mb-3" onclick="window.location.href='<?= base_url('pages/ses/home') ?>';">Kembali</button>
             </div>
         </div>
     </div>
