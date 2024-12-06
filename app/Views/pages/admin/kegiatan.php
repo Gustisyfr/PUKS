@@ -13,7 +13,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <label for="deskripsi">Deskripsi</label>
-                    <textarea name="deskripsi" id="deskripsi" class="form-control" required oninput="updatePreview()"></textarea>
+                    <textarea name="deskripsi" id="deskripsi" class="form-control" required oninput="updatePreview()" maxlength="250" placeholder="Maksimal 250 karakter"></textarea>
                 </div>
                 <div class="form-horizontal mb-3">
                     <div class="row mb-3">
@@ -32,7 +32,7 @@
                             <div class="carousel-inner mb-3">
                                 <div class="carousel-item active c-item">
                                     <img id="image-preview" src="" class="d-block w-100 c-img" alt="Preview Gambar" style="max-height: 550px; object-fit: cover; display: none;">
-                                    <div class="carousel-caption d-none d-md-block">
+                                    <div class="carousel-caption d-none d-md-block" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); background-color: rgba(0, 0, 0, 0.5); color: #fff;">
                                         <h5 id="preview-title">Judul Akan Muncul Di Sini</h5>
                                         <p id="preview-description">Deskripsi akan muncul di sini.</p>
                                     </div>

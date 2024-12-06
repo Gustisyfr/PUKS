@@ -3,7 +3,6 @@
 
 <?= $this->section('content') ?>
 <!-- carousel -->
-
     <div class="row">
         <div class="col">
             <div id="carouselExampleCaptions" class="carousel slide carousel-slide-custom">
@@ -16,7 +15,7 @@
                     <?php foreach ($kegiatan as $index => $k) : ?>
                     <div class="carousel-item <?= $index === 0 ? 'active' : '' ?> c-item">
                     <img src="<?= base_url('/uploads/images/' . $k['gambar']) ?>" class="d-block w-100 c-img" alt="slide <?= $index + 1 ?>">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="carousel-caption d-none d-md-block" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); background-color: rgba(0, 0, 0, 0.5); color: #fff;">
                     <h5><?= esc($k['judul']) ?></h5>
                     <p><?= esc($k['deskripsi']) ?></p>
                     </div>
@@ -108,42 +107,165 @@
 </div>
 
 <!-- daftar mitra yang memberikan dukungan -->
-<div class="container-custom">
-    <h1 class="text-center align-middle mb-3" style="color: aliceblue; padding-top: 60px;">Mitra-mitra yang Mendukung Kebijakan Ekonomi Biru</h1>
-    <div class="card-container-custom">
-      <div class="card-custom">
-        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/1.png" alt="Icon 1" class="card-img-custom">
-        <div class="card-body-custom">
-          <h5 class="card-title-custom">Memperluas Kawasan Konservasi Laut</h5>
+<div class="container-my5">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card content-justify-center">
+        <div class="card-header" style="background-color: rgb(0, 42, 82);">
+          <h3 class="text-center mt-3" style="color: aliceblue;">Dukungan Mitra dalam Kebijakan Ekonomi Biru</h3>
+          <!-- Memperluas Kawasan Konservasi Laut -->
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mt-4 mb-4 mx-3">
+                <div class="card-header" style="background-color: rgb(0, 42, 82);">
+                  <h6 class="text-center" style="color: aliceblue;">Memperluas Kawasan Konservasi Laut</h6>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+                    <table class="table table-bordered table-striped">
+                      <thead class="table-primary text-center align-middle">
+                        <tr>
+                          <th scope="col">No</th>
+                          <th scope="col">Nama Mitra</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-light">
+                        <?php for ($i = 0; $i < 10; $i++) : ?>
+                          <tr>
+                            <th scope="row" class="text-center"><?= $i + 1 ?></th>
+                            <td>Lorem Ipsum</td>
+                          </tr>
+                        <?php endfor; ?>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Penangkapan Ikan Terukur Berbasis Kuota -->
+            <div class="col-md-6">
+              <div class="card mt-4 mb-4 mx-3">
+                <div class="card-header" style="background-color: rgb(0, 42, 82);">
+                  <h6 class="text-center" style="color: aliceblue;">Penangkapan Ikan Terukur Berbasis Kuota</h6>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+                    <table class="table table-bordered table-striped">
+                      <thead class="table-primary text-center align-middle">
+                        <tr>
+                          <th scope="col">No</th>
+                          <th scope="col">Nama Mitra</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-light">
+                        <?php for ($i = 0; $i < 10; $i++) : ?>
+                          <tr>
+                            <th scope="row" class="text-center"><?= $i + 1 ?></th>
+                            <td>Lorem Ipsum</td>
+                          </tr>
+                        <?php endfor; ?>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pengembangan Budidaya Laut, Pesisir, dan Darat Secara Berkelanjutan -->
+          <div class="row">
+          <div class="col-md-6">
+            <div class="card mt-4 mb-4 mx-3">
+              <div class="card-header" style="background-color: rgb(0, 42, 82);">
+                <h6 class="text-center text-white">Pengembangan Budidaya Laut, Pesisir, dan Darat Secara Berkelanjutan</h6>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-primary text-center align-middle">
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Mitra</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-light">
+                      <?php for ($i = 0; $i < 10; $i++) : ?>
+                        <tr>
+                          <th scope="row" class="text-center"><?= $i + 1 ?></th>
+                          <td>Lorem Ipsum</td>
+                        </tr>
+                      <?php endfor; ?>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Pengawasan dan Pengendalian Pesisir dan Pulau-Pulau Kecil -->
+          <div class="col-md-6">
+            <div class="card mt-4 mb-4 mx-3">
+              <div class="card-header" style="background-color: rgb(0, 42, 82);">
+                <h6 class="text-center text-white">Pengawasan dan Pengendalian Pesisir dan Pulau-Pulau Kecil</h6>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-primary text-center align-middle">
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Mitra</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-light">
+                      <?php for ($i = 0; $i < 10; $i++) : ?>
+                        <tr>
+                          <th scope="row" class="text-center"><?= $i + 1 ?></th>
+                          <td>Lorem Ipsum</td>
+                        </tr>
+                      <?php endfor; ?>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Pengelolaan Sampah Plastik di Laut -->
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card mt-4 mb-4 mx-3">
+              <div class="card-header" style="background-color: rgb(0, 42, 82);">
+                <h6 class="text-center text-white">Pengelolaan Sampah Plastik di Laut</h6>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-primary text-center align-middle">
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Nama Mitra</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-light">
+                      <?php for ($i = 0; $i < 10; $i++) : ?>
+                        <tr>
+                          <th scope="row" class="text-center"><?= $i + 1 ?></th>
+                          <td>Lorem Ipsum</td>
+                        </tr>
+                      <?php endfor; ?>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card-custom">
-        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/2.png" alt="Icon 2" class="card-img-custom">
-        <div class="card-body-custom">
-          <h5 class="card-title-custom">Penangkapan Ikan Terukur Berbasis Kuota</h5>
-        </div>
-      </div>
-      <div class="card-custom">
-        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/3.png" alt="Icon 3" class="card-img-custom">
-        <div class="card-body-custom">
-          <h5 class="card-title-custom">Pengembangan Budidaya Laut, Pesisir, dan Darat Secara Berkelanjutan</h5>
-        </div>
-      </div>
-      <div class="card-custom">
-        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/4.png" alt="Icon 4" class="card-img-custom">
-        <div class="card-body-custom">
-          <h5 class="card-title-custom">Pengawasan dan Pengendalian Pesisir dan Pulau-Pulau Kecil</h5>
-        </div>
-      </div>
-      <div class="card-custom">
-        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/5.png" alt="Icon 5" class="card-img-custom">
-        <div class="card-body-custom">
-          <h5 class="card-title-custom">Pengelolaan Sampah Plastik di Laut</h5>
-        </div>
       </div>
     </div>
+  </div>
 </div>
 
+<!-- script chart -->
 <script>
     $(document).ready(function() {
         // Ambil data dari server

@@ -79,7 +79,7 @@ class Statusr extends BaseController
     public function delete($id)
     {
         $this->statusrModel->delete($id);
-        return redirect()->to('/admin/statusr')->with('message', 'Data berhasil dihapus');
+        return redirect()->to('pages/admin/statusr')->with('message', 'Data berhasil dihapus');
     }
 
     public function getChartData()

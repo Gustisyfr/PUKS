@@ -29,7 +29,7 @@ class Kegiatan_edit extends BaseController
     public function delete($id)
     {
         $this->kegiatanModel->delete($id);
-        return redirect()->to('/admin/kegiatan_edit')->with('message', 'Data berhasil dihapus');
+        return redirect()->to('/pages/admin/kegiatan_edit')->with('message', 'Data berhasil dihapus');
     }
 
     
