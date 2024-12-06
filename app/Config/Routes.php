@@ -10,7 +10,7 @@ $routes->get('/auth/login', 'Login::index');
 $routes->get('/auth/register', 'Login::register');
 $routes->get('/auth/forgot', 'Login::forgot');
 
-$routes->post('/admin', 'Home::index'); 
+// $routes->post('/admin', 'Home::index'); 
 $routes->post('/', 'Home::index'); 
 $routes->get('/home', 'Home::index');   
 

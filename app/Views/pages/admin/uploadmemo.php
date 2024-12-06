@@ -72,6 +72,9 @@
                     <input class="form-control" type="text" value="<?= $mitra['bentuk_dukungan']; ?>" disabled readonly>
                 </div>
                 <div class="mb-3">
+                    <label for="disabledTextInput" class="form-label">Bentuk Dukungan Program KKP (Opsional)</label>
+                    <input class="form-control" type="text" value="<?= !empty($mitra['bentuk_dukungan_opsional']) ? $mitra['bentuk_dukungan_opsional'] : '-'; ?>" disabled readonly>                </div>
+                <div class="mb-3">
                     <label for="disabledTextInput" class="form-label">Uraian</label>
                     <textarea class="form-control" type="text" rows="3" disabled readonly><?= !empty($mitra['uraian']) ? $mitra['uraian'] : 'Tidak ada uraian'; ?></textarea>
                 </div>

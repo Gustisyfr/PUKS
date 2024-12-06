@@ -24,6 +24,7 @@ class StatusvdModel extends Model
         'bentuk_kerjasama',
         'kerjasama_lain',
         'bentuk_dukungan',
+        'bentuk_dukungan_opsional',
         'status_verifikasi',
         'uraian',
         'surat_permohonan',
