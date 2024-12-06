@@ -23,6 +23,10 @@ class Statusr extends BaseController
     {
         $statusr = $this->statusrModel->findAll();
 
+        foreach ($statusr as &$item) {
+            $item['bentuk_dukungan_opsional'] = $item['bentuk_dukungan_opsional'] ?? '-';
+        }
+
         $data = [
             'title' => 'Status Rekomendasi',
             'statusr' => $statusr
@@ -64,6 +68,7 @@ class Statusr extends BaseController
                 'unit_organisasi' => $mitraStatusvd['unit_organisasi'] ?? '-',
                 'bentuk_kerjasama' => $mitraStatusvd['bentuk_kerjasama'] ?? '-',
                 'bentuk_dukungan' => $mitraStatusvd['bentuk_dukungan'] ?? '-',
+                'bentuk_dukungan_opsional' => $mitraStatusvd['bentuk_dukungan_opsional'] ?? '-',
                 'status_rekomendasi' => $statusr['status_rekomendasi']
             ]
         ];

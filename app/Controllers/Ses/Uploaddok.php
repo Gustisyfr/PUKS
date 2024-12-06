@@ -55,6 +55,7 @@ class Uploaddok extends BaseController
             'bentuk_kerjasama' => $this->request->getVar('bentuk_kerjasama'), 
             'kerjasama_lain' => $this->request->getVar('kerjasama_lain'), 
             'bentuk_dukungan' => $this->request->getVar('bentuk_dukungan'), 
+            'bentuk_dukungan_opsional' => $this->request->getVar('bentuk_dukungan_opsional'), 
             'uraian' => $this->request->getVar('uraian')
         ];
 
@@ -62,7 +63,7 @@ class Uploaddok extends BaseController
         $kategori = $this->request->getVar('jenis_mitra');
         $fileInputs = [];
 
-        if ($kategori == 'Kementrian/Lembaga') {
+        if ($kategori == 'Kementrian/Lembaga' || $kategori == 'Pemerintah Daerah' || $kategori == 'Badan Usaha Milik Negara') {
             $fileInputs = [
                 'surat_permohonan' => 'surat_permohonan',
                 'draft_kerjasama' => 'draft_kerjasama'
@@ -73,7 +74,7 @@ class Uploaddok extends BaseController
                 'profil_mitra' => 'profil_mitra',
                 'draft_kerjasama' => 'draft_kerjasama'
             ];
-        } elseif ($kategori == 'Ormas/LSM') {
+        } elseif ($kategori == 'Oraganisasi Masyarakat/Lembaga Swadaya Masyarakat' || $kategori == 'Swasta') {
             $fileInputs = [
                 'surat_permohonan' => 'surat_permohonan',
                 'profil_mitra' => 'profil_mitra',

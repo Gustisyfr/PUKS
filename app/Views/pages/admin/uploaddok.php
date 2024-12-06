@@ -288,8 +288,11 @@
                     <select class="form-select" id="jenis_mitra" name="jenis_mitra" aria-label="Default select example" required>
                         <option value="">Pilih Jenis Mitra</option>
                         <option value="Kementrian/Lembaga">Kementrian/Lembaga</option>
+                        <option value="Pemerintah Daerah">Pemerintah Daerah</option>
+                        <option value="Badan Usaha Milik Negara">Badan Usaha Milik Negara</option>
                         <option value="Universitas/Perguruan Tinggi">Universitas/Perguruan Tinggi</option>
-                        <option value="Ormas/LSM">Ormas/LSM</option>
+                        <option value="Swasta">Swasta</option>
+                        <option value="Organisasi Masyarakat/Lembaga Swadaya Masyarakat">Organisasi Masyarakat/Lembaga Swadaya Masyarakat</option>
                     </select>
                 </div>
                 <!-- nama mitra -->
@@ -459,14 +462,14 @@
     document.getElementById('draftKerjasamaInput').style.display = 'none';
     document.getElementById('ormasInput').style.display = 'none';
     
-    if (this.value === 'Kementrian/Lembaga' || this.value === 'Universitas/Perguruan Tinggi' || this.value === 'Ormas/LSM') {
+    if (this.value === 'Kementrian/Lembaga' || this.value === 'Pemerintah' || this.value === 'Badan Usaha Milik Negara' || this.value === 'Universitas/Perguruan Tinggi' || this.value === 'Swasta' || this.value === 'Organisasi Masyarakat/Lembaga Swadaya Masyarakat') {
         document.getElementById('suratPermohonanInput').style.display = 'block';
         document.getElementById('draftKerjasamaInput').style.display = 'block';
 
-        if (this.value === 'Kementrian/Lembaga') {
+        if (this.value === 'Kementrian/Lembaga' || this.value === 'Pemerintah' || this.value === 'Badan Usaha Milik Negara') {
         } else if (this.value === 'Universitas/Perguruan Tinggi') {
             document.getElementById('profilMitraInput').style.display = 'block';
-        } else if (this.value === 'Ormas/LSM') {
+        } else if (this.value === 'Swasta' || this.value === 'Organisasi Masyarakat/Lembaga Swadaya Masyarakat') {
             document.getElementById('profilMitraInput').style.display = 'block';
             document.getElementById('ormasInput').style.display = 'block';
         }

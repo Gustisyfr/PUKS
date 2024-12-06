@@ -86,8 +86,8 @@ $routes->get('/progress/(:segment)', 'Progress::index/$1');
 
 // routes SES
 // $routes->group('Admin', ['filter' => 'auth'], function($routes) {
-    $routes->get('/pages/ses/home', 'Ses/Home::index'); 
-    $routes->post('/pages/ses/home', 'Ses/Home::index');
+    // $routes->get('/pages/ses/home', 'Ses\Home::index'); 
+    // $routes->post('/pages/ses/home', 'Ses\Home::index');
     
     $routes->get('/pages/ses/uploaddok', 'Ses\Uploaddok::index');
     $routes->post('/pages/ses/uploaddok', 'Ses\Uploaddok::index');

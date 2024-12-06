@@ -18,8 +18,11 @@
                 <select class="form-select <?= ($validation->hasError('jenis_mitra')) ? 'is-invalid' : ''; ?>" id="jenis_mitra" name="jenis_mitra" aria-label="Default select example">
                     <option value="">Pilih Jenis Mitra</option>
                     <option value="Kementrian/Lembaga">Kementrian/Lembaga</option>
+                    <option value="Pemerintah Daerah">Pemerintah Daerah</option>
+                    <option value="Badan Usaha Milik Negara">Badan Usaha Milik Negara</option>
                     <option value="Universitas/Perguruan Tinggi">Universitas/Perguruan Tinggi</option>
-                    <option value="Ormas/LSM">Ormas/LSM</option>
+                    <option value="Swasta">Swasta</option>
+                    <option value="Organisasi Masyarakat/Lembaga Swadaya Masyarakat">Organisasi Masyarakat/Lembaga Swadaya Masyarakat</option>
                 </select>
                 <div class="invalid-feedback"><?= $validation->getError('jenis_mitra'); ?></div>
                 </div>

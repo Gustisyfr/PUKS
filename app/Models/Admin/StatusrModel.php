@@ -14,6 +14,7 @@ class StatusrModel extends Model
         'jenis_mitra',
         'bentuk_kerjasama',
         'bentuk_dukungan',
+        'bentuk_dukungan_opsional',
         'status_rekomendasi',
         'catatan',
         'file_memo'
@@ -31,6 +32,7 @@ class StatusrModel extends Model
                     'jenis_mitra' => $item['jenis_mitra'],
                     'bentuk_kerjasama' => $item['bentuk_kerjasama'],
                     'bentuk_dukungan' => $item['bentuk_dukungan'],
+                    'bentuk_dukungan_opsional' => $item['bentuk_dukungan_opsional'],
                     'catatan' => '',
                     'status_rekomendasi' => ''
                 ]);

@@ -82,7 +82,6 @@
 </div>
 
 <!-- chart -->
-
 <div class="container my-5">
     <div class="row">
         <div class="col-md-6">
@@ -108,6 +107,42 @@
     </div>
 </div>
 
+<!-- daftar mitra yang memberikan dukungan -->
+<div class="container-custom">
+    <h1 class="text-center align-middle mb-3" style="color: aliceblue; padding-top: 60px;">Mitra-mitra yang Mendukung Kebijakan Ekonomi Biru</h1>
+    <div class="card-container-custom">
+      <div class="card-custom">
+        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/1.png" alt="Icon 1" class="card-img-custom">
+        <div class="card-body-custom">
+          <h5 class="card-title-custom">Memperluas Kawasan Konservasi Laut</h5>
+        </div>
+      </div>
+      <div class="card-custom">
+        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/2.png" alt="Icon 2" class="card-img-custom">
+        <div class="card-body-custom">
+          <h5 class="card-title-custom">Penangkapan Ikan Terukur Berbasis Kuota</h5>
+        </div>
+      </div>
+      <div class="card-custom">
+        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/3.png" alt="Icon 3" class="card-img-custom">
+        <div class="card-body-custom">
+          <h5 class="card-title-custom">Pengembangan Budidaya Laut, Pesisir, dan Darat Secara Berkelanjutan</h5>
+        </div>
+      </div>
+      <div class="card-custom">
+        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/4.png" alt="Icon 4" class="card-img-custom">
+        <div class="card-body-custom">
+          <h5 class="card-title-custom">Pengawasan dan Pengendalian Pesisir dan Pulau-Pulau Kecil</h5>
+        </div>
+      </div>
+      <div class="card-custom">
+        <img src="https://kkp.go.id/assets/5_kebijakan_ekonomi_biru/5.png" alt="Icon 5" class="card-img-custom">
+        <div class="card-body-custom">
+          <h5 class="card-title-custom">Pengelolaan Sampah Plastik di Laut</h5>
+        </div>
+      </div>
+    </div>
+</div>
 
 <script>
     $(document).ready(function() {

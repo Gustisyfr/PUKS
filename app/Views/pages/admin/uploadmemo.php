@@ -80,7 +80,7 @@
                 </div>
                 <!-- hidden disable input file-->
                 <!-- surat permohonan -->
-                <div class="form-horizontal" style="display: <?= ($mitra['jenis_mitra'] == 'Kementrian/Lembaga' || $mitra['jenis_mitra'] == 'Universitas/Perguruan Tinggi' || $mitra['jenis_mitra'] == 'Ormas/LSM') ? 'block' : 'none'; ?>">
+                <div class="form-horizontal" style="display: <?= ($mitra['jenis_mitra'] == 'Kementrian/Lembaga' || $mitra['jenis_mitra'] == 'Pemerintah Daerah' || $mitra['jenis_mitra'] == 'Badan Usaha Milik Negara' || $mitra['jenis_mitra'] == 'Universitas/Perguruan Tinggi' || $mitra['jenis_mitra'] == 'Swasta' || $mitra['jenis_mitra'] == 'Organisasi Masyarakat/Lembaga Swadaya Masyarakat') ? 'block' : 'none'; ?>">
                     <div class="row mb-3">
                         <label for="surat_permohonan" class="col-sm-3 col-form-label">Surat Permohonan Kerja Sama</label>
                         <div class="col-sm-5">
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <!-- Profil Mitra -->
-                <div class="form-horizontal" style="display: <?= ($mitra['jenis_mitra'] == 'Universitas/Perguruan Tinggi' || $mitra['jenis_mitra'] == 'Ormas/LSM') ? 'block' : 'none'; ?>">
+                <div class="form-horizontal" style="display: <?= ($mitra['jenis_mitra'] == 'Universitas/Perguruan Tinggi' || $mitra['jenis_mitra'] == 'Swasta' || $mitra['jenis_mitra'] == 'Organisasi Masyarakat/Lembaga Swadaya Masyarakat') ? 'block' : 'none'; ?>">
                     <div class="row mb-3">
                         <label for="profil_mitra" class="col-sm-3 col-form-label">Profil Mitra</label>
                         <div class="col-sm-5">
@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <!-- Draft Kerja Sama -->
-                <div class="form-horizontal" style="display: <?= ($mitra['jenis_mitra'] == 'Kementrian/Lembaga' || $mitra['jenis_mitra'] == 'Universitas/Perguruan Tinggi' || $mitra['jenis_mitra'] == 'Ormas/LSM') ? 'block' : 'none'; ?>">
+                <div class="form-horizontal" style="display: <?= ($mitra['jenis_mitra'] == 'Kementrian/Lembaga' || $mitra['jenis_mitra'] == 'Pemerintah Daerah' || $mitra['jenis_mitra'] == 'Badan Usaha Milik Negara' || $mitra['jenis_mitra'] == 'Universitas/Perguruan Tinggi' || $mitra['jenis_mitra'] == 'Swasta' || $mitra['jenis_mitra'] == 'Organisasi Masyarakat/Lembaga Swadaya Masyarakat') ? 'block' : 'none'; ?>">
                     <div class="row mb-3">
                         <label for="draft_kerjasama" class="col-sm-3 col-form-label">Draft Kerja Sama</label>
                         <div class="col-sm-5">
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <!-- SK KumHam -->
-                <div class="form-horizontal" style="display: <?= ($mitra['jenis_mitra'] == 'Ormas/LSM') ? 'block' : 'none'; ?>">
+                <div class="form-horizontal" style="display: <?= ($mitra['jenis_mitra'] == 'Swasta' || $mitra['jenis_mitra'] == 'Organisasi Masyarakat/Lembaga Swadaya Masyarakat') ? 'block' : 'none'; ?>">
                     <div class="row mb-3">
                         <label for="sk_kumham" class="col-sm-3 col-form-label">SK KumHam</label>
                         <div class="col-sm-5">
@@ -132,7 +132,7 @@
                     </div>
                 </div>
                 <!-- Surat Komitmen -->
-                <div class="form-horizontal" style="display: <?= ($mitra['jenis_mitra'] == 'Ormas/LSM') ? 'block' : 'none'; ?>">
+                <div class="form-horizontal" style="display: <?= ($mitra['jenis_mitra'] == 'Swasta' || $mitra['jenis_mitra'] == 'Organisasi Masyarakat/Lembaga Swadaya Masyarakat') ? 'block' : 'none'; ?>">
                     <div class="row mb-3">
                         <label for="surat_komitmen" class="col-sm-3 col-form-label">Surat Komitmen Kesediaan Anggaran</label>
                         <div class="col-sm-5">
