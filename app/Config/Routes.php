@@ -13,6 +13,7 @@ $routes->get('/auth/forgot', 'Login::forgot');
 // $routes->post('/admin', 'Home::index'); 
 $routes->post('/', 'Home::index'); 
 $routes->get('/home', 'Home::index');   
+$routes->post('/home', 'Home::index');   
 
 $routes->get('/pages/daftarks', 'Daftarks::index'); 
 $routes->post('/pages/daftarks', 'Daftarks::index');

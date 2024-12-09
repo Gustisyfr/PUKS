@@ -106,7 +106,7 @@
     </div>
 </div>
 
-<!-- daftar mitra yang memberikan dukungan -->
+<!-- daftar mitra yang memberikan dukungan blue economy-->
 <div class="container-my5">
   <div class="row">
     <div class="col-md-12">

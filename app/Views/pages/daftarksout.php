@@ -35,7 +35,11 @@
             </form>
             
             <div>
-                <button type="button" class="btn btn-success mb-3" onclick="window.location.href='<?= base_url('/home') ?>';">Selesai</button>
+                <?php if ($role == 'Superadmin') : ?>
+                    <button type="button" class="btn btn-success mb-3" onclick="window.location.href='<?= base_url('/home') ?>';">Selesai</button>
+                <?php else : ?>
+                    <button type="button" class="btn btn-success mb-3" onclick="window.location.href='<?= base_url('/pages/mitra/home') ?>';">Selesai</button>
+                <?php endif; ?>
             </div>
         </div>
     </div>

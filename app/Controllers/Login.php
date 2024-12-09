@@ -2,9 +2,6 @@
 
 namespace App\Controllers;
 
-use Myth\Auth\Config\Auth as AuthConfig;
-// use Myth\Auth\Authentication\Authentication;
-
 class Login extends BaseController
 {
     public function index()
@@ -12,7 +9,7 @@ class Login extends BaseController
         // Cek session
         if (session()->get('isLoggedIn')) {
             dd(session()->get('isLoggedIn')); // Cek nilai session 'isLoggedIn'
-            return redirect()->to('/pages/home'); // Redirect ke halaman 'home'
+            return redirect()->to('/home'); // Redirect ke halaman 'home'
         }
 
         $data = [
@@ -47,7 +44,7 @@ class Login extends BaseController
             // Login berhasil
             session()->set('isLoggedIn', true); // Set session 'isLoggedIn'
             dd(session()->get('isLoggedIn')); // Cek nilai session 'isLoggedIn'
-            return redirect()->to('/pages/home'); // Redirekt ke halaman 'home'
+            return redirect()->to('/home'); // Redirekt ke halaman 'home'
         } else {
             // Login gagal
             return redirect()->back()->withInput()->with('error', 'Invalid email or password.');
