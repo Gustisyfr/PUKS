@@ -6,9 +6,9 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Login::index');
-$routes->get('/auth/login', 'Login::index');
-$routes->get('/auth/register', 'Login::register');
-$routes->get('/auth/forgot', 'Login::forgot');
+$routes->get('/login', 'Login::index');
+$routes->get('/register', 'Login::register');
+$routes->get('/forgot', 'Login::forgot');
 
 // $routes->post('/admin', 'Home::index'); 
 $routes->post('/', 'Home::index'); 
@@ -108,7 +108,7 @@ $routes->get('/progress/(:segment)', 'Progress::index/$1');
     $routes->get('/pages/admin/statusvm', 'Admin\Statusvm::index');
     $routes->post('/pages/admin/statusvm/', 'Admin\Statusvm::index');
 
-    // $routes->get('/admin/statusr/chart-data', 'Admin\Statusr::getChartData');
-    // $routes->get('/admin/statusr/getChartData', 'Admin\Statusr::getChartData');
+    $routes->get('/admin/statusr/chart-data', 'Admin\Statusr::getChartData');
+    $routes->get('/admin/statusr/getChartData', 'Admin\Statusr::getChartData');
 // });
 

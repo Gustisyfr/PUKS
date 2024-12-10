@@ -34,6 +34,9 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'rolesuperadminfilter' => \App\Filters\RoleSuperadminFilter::class,
+        'roleadminfilter' => \App\Filters\RoleAdminFilter::class,
+        'roleuserfilter' => \App\Filters\RoleUserFilter::class,
         
     ];
     
@@ -71,8 +74,7 @@ class Filters extends BaseFilters
      */
     public array $globals = [
         'before' => [
-            'login',
-            'csrf' => ['except' => ['your-excluded-route']]
+            'csrf' 
             // 'methodOverride',
             // 'honeypot',
             // 'invalidchars',
@@ -108,5 +110,7 @@ class Filters extends BaseFilters
      *
      * @var array<string, array<string, list<string>>>
      */
-    public array $filters = [];
+    public array $filters = [
+        
+    ];
 }

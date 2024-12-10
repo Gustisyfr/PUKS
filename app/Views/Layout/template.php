@@ -53,14 +53,12 @@
             </p>
             </div>
           </div>
-            <!-- Bagian Ikon Sosial Media -->
             <div class="col-md-6 mb-3">
                 <p class="text-right small-text fw-bold fw-bolder">Ikuti Kami</p>
                 <div>
-                    <!-- Icon Sosial Media (gunakan font awesome atau ikon lain sesuai keperluan) -->
                     <a href="https://www.facebook.com/KementerianKelautandanPerikananRI/" class="text-white me-3"><i class="bi bi-facebook"></i></a>
                     <a href="https://x.com/kkpgoid" class="text-white me-3"><i class="bi bi-twitter"></i></a>
-                    <a href="https://www.instagram.com/birorenkkp/" class="text-white"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/kkpgoid/" class="text-white"><i class="bi bi-instagram"></i></a>
                 </div>
             </div>
             

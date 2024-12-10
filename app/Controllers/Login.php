@@ -1,79 +1,88 @@
-<?php 
+<?php
 
 namespace App\Controllers;
+
+use App\Models\UserModel;
 
 class Login extends BaseController
 {
     public function index()
     {
-        // Cek session
-        if (session()->get('isLoggedIn')) {
-            dd(session()->get('isLoggedIn')); // Cek nilai session 'isLoggedIn'
-            return redirect()->to('/home'); // Redirect ke halaman 'home'
-        }
-
-        $data = [
-            'config' => config(AuthConfig::class),
-            'title' => 'Login | Pengajuan Usulan Kerja Sama'
-        ];
-
-        return view('/auth/login', $data);
+        return view('/login');
     }
-
-    public function processLogin() 
+    
+    public function processLogin()
     {
-        $rules = [
-            'email' => 'required|valid_email',
-            'password' => 'required',
-        ];
+        $userModel = new UserModel();
 
-        if (!$this->validate($rules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
-        }
-
-        $email = $this->request->getPost('email');
+        $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
 
-        $authentication = service('authentication'); // Instance Authentication
-        $result = $authentication->attempt($email, $password);
+        $user = $userModel->where('username', $username)->orWhere('email', $username)->first();
 
-        // Cek hasil login
-        dd($result); // Cek nilai $result
-
-        if ($result) {
-            // Login berhasil
-            session()->set('isLoggedIn', true); // Set session 'isLoggedIn'
-            dd(session()->get('isLoggedIn')); // Cek nilai session 'isLoggedIn'
-            return redirect()->to('/home'); // Redirekt ke halaman 'home'
-        } else {
-            // Login gagal
-            return redirect()->back()->withInput()->with('error', 'Invalid email or password.');
+        if (!$user || !password_verify($password, $user['password'])) {
+            return redirect()->back()->withInput()->with('error', 'Username atau password salah.');
         }
+
+        // Set session
+        session()->set([
+            'isLoggedIn' => true,
+            'userId'     => $user['id'],
+            'username'   => $user['username'],
+            'role'       => $this->getRole($user['level_id']),
+        ]);
+
+        // Redirect berdasarkan role
+        if (session()->get('role') === 'superadmin') {
+            return redirect()->to('/dashboard/superadmin');
+        } elseif (session()->get('role') === 'admin') {
+            return redirect()->to('/dashboard/admin');
+        } else {
+            return redirect()->to('/dashboard/user');
+        }
+    }
+
+    private function getRole($levelId)
+    {
+        $roles = [
+            1 => 'superadmin',
+            2 => 'admin',
+            3 => 'user',
+        ];
+
+        return $roles[$levelId] ?? 'user';
     }
 
     public function register()
     {
-        $data = [
-            'config' => config(AuthConfig::class),
-            'title' => 'Registrasi | Pengajuan Usulan Kerja Sama'
-        ];
-        
-        return view('/auth/register', $data);
+        return view('/register');
     }
-    
+
+    public function processRegister()
+    {
+        $userModel = new \App\Models\UserModel();
+
+        $data = [
+            'username' => $this->request->getPost('username'),
+            'email'    => $this->request->getPost('email'),
+            'password' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+            'level_id' => 3, // Default user
+        ];
+
+        $userModel->insert($data);
+
+        return redirect()->to('/login')->with('success', 'Registrasi berhasil! Silakan login.');
+    }
+
     public function forgot()
     {
-        $data = [
-            'config' => config(AuthConfig::class),
-            'title' => 'Lupa Password | Pengajuan Usulan Kerja Sama'
-        ];
-        
-        return view('/auth/forgot', $data);
+        return view('/forgot');
     }
 
     public function logout()
     {
-        session()->remove('isLoggedIn'); 
-        return redirect()->to('/login'); 
+        session()->destroy();
+        return redirect()->to('/login');
     }
+
 }

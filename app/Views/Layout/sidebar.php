@@ -6,7 +6,7 @@
             <button type="button" class="btn-close" style="background-color: aliceblue;"  data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <!-- sidebar Superadmin -->
-        <?php if(in_groups('Superadmin')) : ?>
+        <!-- ?php if (session()->get('role') === 'superadmin'): ? -->
         <hr class="offcanvas-divider" style="color: aliceblue;">
         <div class="offcanvas-body">
             <ul class="nav flex-column">
@@ -84,10 +84,10 @@
                         Edit Dokumentasi Kegiatan
                     </a>
                 </li>
-                <?php endif; ?>
+                
         <!-- sidebar Admin -->
-        <?php if(in_groups('Admin')) : ?>
-        <hr class="offcanvas-divider" style="color: aliceblue;">
+        <!-- ?php elseif (session()->get('role') === 'admin'): ? -->
+        <!-- <hr class="offcanvas-divider" style="color: aliceblue;">
         <div class="offcanvas-body">
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -135,11 +135,11 @@
                         </svg>
                         Upload Dokumen
                     </a>
-                </li>
-                <?php endif; ?>
+                </li> -->
+                
         <!-- sidebar User -->
-        <?php if(in_groups('User')) : ?>
-        <hr class="offcanvas-divider" style="color: aliceblue;">
+        <!-- ?php else: ? -->
+        <!-- <hr class="offcanvas-divider" style="color: aliceblue;"> 
         <div class="offcanvas-body">
             <ul class="nav flex-column">
                 <li class="nav-item">
@@ -169,8 +169,8 @@
                         </svg>
                         Daftar Kerja Sama
                     </a>
-                </li>
-                <?php endif; ?>
+                </li> -->
+                <!-- ?php endif; ? -->
                 <li><hr class="offcanvas-divider" style="color: aliceblue;"></li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="<?= base_url('/') ?>">

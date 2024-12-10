@@ -9,91 +9,57 @@ class Daftarks extends BaseController
 
     public function __construct()
     {
-        $this->statusvmModel = new statusvmModel();
+        $this->statusvmModel = new StatusvmModel();
     }
 
-        public function index()
+    public function index()
     {
+        $role = session()->get('role'); // Ambil role dari session
         $data = [
             'title' => 'Daftar Kerja Sama',
-            'validation' => \Config\Services::validation()
+            'role' => $role, // Kirim role ke view
         ];
-        
-        return view('/pages/daftarks', $data);  
+
+        return view('pages/daftarks', $data);
     }
 
     public function save()
     {
         if (!$this->validate([
-            'nama_mitra' => [
-                'label' => 'Nama Mitra',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi.'
-                ]
-            ],
-            'jenis_mitra' => [
-                'label' => 'Jenis Mitra',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi.'
-                ]
-            ],
-            'alamat' => [
-                'label' => 'Alamat',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi.'
-                ]
-            ],
-            'email' => [
-                'label' => 'Email',
-                'rules' => 'required|valid_email',
-                'errors' => [
-                    'required' => '{field} harus diisi.',
-                    'valid_email' => '{field} harus berupa email yang valid.'
-                ]
-            ],
-            'notel' => [
-                'label' => 'No. Telepon',
-                'rules' => 'required|numeric',
-                'errors' => [
-                    'required' => '{field} harus diisi.',
-                    'numeric' => '{field} harus berupa angka.'
-                ]
-            ]
+            'nama_mitra' => 'required',
+            'jenis_mitra' => 'required',
+            'alamat' => 'required',
+            'email' => 'required|valid_email',
+            'notel' => 'required|numeric',
         ])) {
-        
-        $validation= \Config\Services::validation();
-        return redirect()->to('/pages/daftarks')->withInput()->with('validation', $validation);
+            return redirect()->to('/pages/daftarks')->withInput()->with('errors', $this->validator);
         }
-        
-        // membuat nomor registrasi
-        $date = date('Ymd');
-        $uniqueId = strtoupper(substr(md5(uniqid(rand(), true)), 0, 6));
-        $nomorRegistrasi = 'KALROREN' . $date . $uniqueId;
 
+        // Generate nomor registrasi
+        $nomorRegistrasi = 'KALROREN' . date('Ymd') . strtoupper(substr(md5(uniqid(rand(), true)), 0, 6));
+
+        // Simpan ke database
         $this->statusvmModel->save([
             'nomor_registrasi' => $nomorRegistrasi,
-            'nama_mitra' => $this->request->getVar('nama_mitra'),
-            'jenis_mitra' => $this->request->getVar('jenis_mitra'),
-            'alamat' => $this->request->getVar('alamat'),
-            'email' => $this->request->getVar('email'),
-            'notel' => $this->request->getVar('notel')
+            'nama_mitra' => $this->request->getPost('nama_mitra'),
+            'jenis_mitra' => $this->request->getPost('jenis_mitra'),
+            'alamat' => $this->request->getPost('alamat'),
+            'email' => $this->request->getPost('email'),
+            'notel' => $this->request->getPost('notel'),
         ]);
 
-        // mengirimkan data ke view daftarksout
+        // Redirect ke halaman Daftarksout
         $data = [
-            'title' => 'Summary Pendaftaran', 
+            'title' => 'Summary Pendaftaran',
             'nomor_registrasi' => $nomorRegistrasi,
-            'nama_mitra' => $this->request->getVar('nama_mitra'),
-            'jenis_mitra' => $this->request->getVar('jenis_mitra'),
-            'alamat' => $this->request->getVar('alamat'),
-            'email' => $this->request->getVar('email'),
-            'notel' => $this->request->getVar('notel')
+            'role' => session()->get('role'),
+            'nama_mitra' => $this->request->getPost('nama_mitra'),
+            'jenis_mitra' => $this->request->getPost('jenis_mitra'),
+            'alamat' => $this->request->getPost('alamat'),
+            'email' => $this->request->getPost('email'),
+            'notel' => $this->request->getPost('notel'),
         ];
 
-        return view('/pages/daftarksout', $data);
+        return view('pages/daftarksout', $data);
     }
-
 }

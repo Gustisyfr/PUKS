@@ -33,7 +33,6 @@
             </div>
         </div>
     </div>
-
  
 <!-- blue economy -->
 <div class="container-custom">
