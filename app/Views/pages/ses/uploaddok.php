@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col">
             <h2 class="my-4">Upload Dokumen</h2>
-            <form action="<?= base_url('/ses/uploaddok/save'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('ses/uploaddok/save'); ?>" method="post" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <!-- unit organisasi -->
                 <div class="form-group mb-3">

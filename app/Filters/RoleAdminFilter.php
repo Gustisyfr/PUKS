@@ -12,16 +12,14 @@ class RoleAdminFilter implements FilterInterface
     {
         $session = session();
 
-        // Jika pengguna belum login dan tidak berada di halaman login atau proses login
-        if (!$session->get('isLoggedIn') && !in_array($request->uri->getPath(), ['auth-login', 'process_login'])) {
-            return redirect()->to(base_url('auth-login'))->with('error', 'Silakan login terlebih dahulu.');
+        // Pastikan pengguna sudah login
+        if (!$session->get('isLoggedIn')) {
+            return redirect()->to(base_url('login'))->with('error', 'Silakan login terlebih dahulu.');
         }
 
-        // Jika pengguna sudah login tetapi tidak memiliki role Admin (role_id = 1) dan sedang mengakses halaman admin
-        if ($session->get('isLoggedIn') && $session->get('role_id') != 2 && strpos($request->uri->getPath(), 'Admin') !== false) {
-            // Hancurkan session pengguna jika mencoba mengakses halaman admin tanpa hak akses
-            $session->destroy();
-            return redirect()->to(base_url('auth-login'))->with('error', 'Anda tidak memiliki akses ke halaman ini.');
+        // Jika sudah login, cek role
+        if ($session->get('role') !== 'admin') {
+            return redirect()->to(base_url('/admin/home'))->with('error', 'Anda tidak memiliki akses ke halaman ini.');
         }
     }
 

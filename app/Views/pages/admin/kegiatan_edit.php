@@ -30,7 +30,7 @@
                     <td class="text-center"><img src="<?= base_url('/uploads/images/'.$k['gambar']); ?>" alt="<?= $k['judul']; ?>" style="width: 300px;"></td>
                     <td class="text-center"> 
                         <div class="d-flex justify-content-center">
-                            <form action="/admin/kegiatan_edit/<?= $k['id']; ?>" method="post">
+                            <form action="admin/kegiatan_edit/<?= $k['id']; ?>" method="post">
                                 <?= csrf_field(); ?>
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="btn me-auto btn-danger ms-auto p-2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?');" >

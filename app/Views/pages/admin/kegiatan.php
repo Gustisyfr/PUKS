@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col">
             <h2 class="my-4">Upload Dokumentasi Kegiatan</h2>
-            <form action="<?= base_url('/pages/admin/kegiatan/save') ?>" method="POST" enctype="multipart/form-data">
+            <form action="<?= base_url('admin/kegiatan/save') ?>" method="POST" enctype="multipart/form-data">
                 <?= csrf_field(); ?>
                 <div class="form-group mb-3">
                     <label for="judul">Judul</label>

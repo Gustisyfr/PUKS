@@ -35,10 +35,10 @@ class Filters extends BaseFilters
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
         'rolesuperadminfilter' => \App\Filters\RoleSuperadminFilter::class,
-        'roleadminfilter' => \App\Filters\RoleAdminFilter::class,
-        'roleuserfilter' => \App\Filters\RoleUserFilter::class,
-        
+        'roleadminfilter'     => \App\Filters\RoleAdminFilter::class,
+        'roleuserfilter'      => \App\Filters\RoleUserFilter::class,
     ];
+    
     
 
     /**

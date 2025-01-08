@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col">
             <h2 class="my-4">Rekomendasi dan Upload Memo </h2>
-            <form action="<?= base_url('/pages/admin/uploadmemo/update'); ?>" method="post" enctype="multipart/form-data">
+            <form action="<?= base_url('admin/uploadmemo/update'); ?>" method="post" enctype="multipart/form-data">
             <?= csrf_field(); ?>
             <input type="hidden" name="id_mitra" value="<?= $mitra['id']; ?>">
             

@@ -31,7 +31,7 @@ class Statusr extends BaseController
             'title' => 'Status Rekomendasi',
             'statusr' => $statusr
         ];
-        return view('/pages/admin/statusr', $data);
+        return view('pages/admin/statusr', $data);
     }
 
     public function edit($id)
@@ -73,13 +73,13 @@ class Statusr extends BaseController
             ]
         ];
 
-        return view('/admin/statusr', $data);
+        return view('admin/statusr', $data);
     }
 
     public function delete($id)
     {
         $this->statusrModel->delete($id);
-        return redirect()->to('pages/admin/statusr')->with('message', 'Data berhasil dihapus');
+        return redirect()->to('admin/statusr')->with('message', 'Data berhasil dihapus');
     }
 
     public function getChartData()

@@ -20,7 +20,7 @@ class Kegiatan extends BaseController
             'title' => 'Upload Dokumentasi Kegiatan',
             'kegiatan' => $this->kegiatanmodel->findAll(),
         ];
-        return view('/pages/admin/kegiatan', $data);
+        return view('pages/admin/kegiatan', $data);
     }
 
     public function save()

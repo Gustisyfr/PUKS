@@ -53,7 +53,7 @@ class Verifikasidok extends BaseController
                 }
             }
 
-            return redirect()->to('/pages/ses/statusvd')->with('message', 'Status verifikasi berhasil diupdate.');
+            return redirect()->to('ses/statusvd')->with('message', 'Status verifikasi berhasil diupdate.');
         }
 
         return redirect()->back()->with('error', 'Tidak ada data untuk diupdate.');

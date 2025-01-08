@@ -26,7 +26,7 @@ class Statusvd extends BaseController
             'statusvd' => $statusvd
         ];
 
-        return view('/pages/ses/statusvd', $data);
+        return view('pages/ses/statusvd', $data);
         
     }
 
@@ -46,14 +46,14 @@ class Statusvd extends BaseController
         $verifiedData = $this->statusvdModel->getVerifiedWithRegistrationNumber();
         $this->statusrModel->saveFromStatusvd($verifiedData);
 
-        return redirect()->to('/pages/ses/statusvd')->with('success', 'Dokumen berhasil diverifikasi.');
+        return redirect()->to('ses/statusvd')->with('success', 'Dokumen berhasil diverifikasi.');
     }
 
 
     public function delete($id)
     {
         $this->statusvdModel->delete($id);
-        return redirect()->to('/pages/ses/statusvd')->with('message', 'Data berhasil dihapus');
+        return redirect()->to('ses/statusvd')->with('message', 'Data berhasil dihapus');
     }
 
 }

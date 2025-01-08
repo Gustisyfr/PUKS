@@ -1,5 +1,5 @@
 <?php 
-namespace App\Controllers\Admin;
+namespace App\Controllers\Ses;
 
 use App\Controllers\BaseController;
 use App\Models\Admin\StatusrModel;
@@ -23,13 +23,15 @@ class Statusr extends BaseController
     {
         $statusr = $this->statusrModel->findAll();
 
+        foreach ($statusr as &$item) {
+            $item['bentuk_dukungan_opsional'] = $item['bentuk_dukungan_opsional'] ?? '-';
+        }
+
         $data = [
             'title' => 'Status Rekomendasi',
             'statusr' => $statusr
         ];
-        return view('/pages/mitra/statusr', $data);
+        return view('pages/ses/statusr', $data);
     }
-
-
 
 }

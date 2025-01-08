@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Controllers\Admin;
+namespace App\Controllers\Ses;
  
 use App\Controllers\BaseController;
 use App\Models\Admin\StatusvmModel;
@@ -22,13 +22,7 @@ class Statusvm extends BaseController
             'statusvm' => $statusvm
         ];
     
-        return view('pages/admin/statusvm', $data);  
-    }
-    
-    public function delete($id)
-    {
-        $this->statusvmModel->delete($id);
-        return redirect()->to('admin/statusvm')->with('message', 'Data berhasil dihapus');
+        return view('pages/ses/statusvm', $data);  
     }
 
 }

@@ -27,23 +27,25 @@ class Verifikasim extends BaseController
             'mitra' => $statusvm
         ];
 
-        return view('/pages/admin/verifikasim', $data);
+        return view('pages/admin/verifikasim', $data);
     }
 
     public function update()
     {
         $id = $this->request->getPost('id_mitra');
-
         $status = $this->request->getPost('status_verifikasi');
 
         if ($id && $status) {
             $this->statusvmModel->update($id, [
                 'status_verifikasi' => $status
             ]);
-            return redirect()->to('/pages/admin/statusvm')->with('message', 'Status verifikasi berhasil diupdate.');
-            } else {
+            // redirect ke halaman statusvm dengan pesan sukses
+            return redirect()->to('admin/statusvm')->with('message', 'Status verifikasi berhasil diupdate.');
+        } else {
+            // redirect kembali jika data tidak valid
             return redirect()->back()->with('error', 'Tidak ada data untuk diupdate.');
-            }
-    }    
+        }
+    }
+    
 
 }

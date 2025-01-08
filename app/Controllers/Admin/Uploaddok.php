@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Controllers\Ses;
+namespace App\Controllers\Admin;
 
 use App\Controllers\BaseController;
 use App\Models\Admin\StatusvmModel;
@@ -15,7 +15,6 @@ class Uploaddok extends BaseController
     {
         $this->statusvmModel = new StatusvmModel();
         $this->statusvdModel = new StatusvdModel();
-
     }
 
     public function index()
@@ -26,7 +25,7 @@ class Uploaddok extends BaseController
             'title' => 'Upload Dokumen',
             'statusvm' => $statusvm
         ];
-        return view('pages/ses/uploaddok', $data);
+        return view('pages/admin/uploaddok', $data);
     }
 
     public function save()
@@ -114,7 +113,7 @@ class Uploaddok extends BaseController
 
         $this->statusvdModel->save($data);
         
-        return redirect()->to('/statusvd')->with('message', 'Data berhasil disimpan');
+        return redirect()->to('admin/statusvd')->with('message', 'Data berhasil disimpan');
     }
  
 }

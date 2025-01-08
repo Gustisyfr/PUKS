@@ -23,13 +23,13 @@ class Kegiatan_edit extends BaseController
             'kegiatan' => $kegiatan
         ];
     
-        return view('/pages/admin/kegiatan_edit', $data);  
+        return view('pages/admin/kegiatan_edit', $data);  
     }
     
     public function delete($id)
     {
         $this->kegiatanModel->delete($id);
-        return redirect()->to('/pages/admin/kegiatan_edit')->with('message', 'Data berhasil dihapus');
+        return redirect()->to('admin/kegiatan_edit')->with('message', 'Data berhasil dihapus');
     }
 
     

@@ -51,7 +51,7 @@ class Uploadmemo extends BaseController
             'mitra' => $mitra
         ];
 
-        return view('/pages/admin/uploadmemo', $data);
+        return view('pages/admin/uploadmemo', $data);
     }
 
         
@@ -89,8 +89,8 @@ class Uploadmemo extends BaseController
         $result = $this->statusrModel->update($id, $data);
         if (!$result) {
         return redirect()->back()->with('error', 'Gagal memperbarui data.');
-}
+        }
 
-        return redirect()->to('/pages/admin/statusr')->with('message', 'Data berhasil diperbarui.');
+        return redirect()->to('admin/statusr')->with('message', 'Data berhasil diperbarui.');
     }
 }
